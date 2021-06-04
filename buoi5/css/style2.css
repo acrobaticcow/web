@@ -1,0 +1,91 @@
+* {
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: "playFairDisplay", sans-serif;
+    box-sizing: border-box;
+  }
+  .main{
+    width: 1062px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @font-face {
+    font-family: "playFairDisplay";
+    src: url(../img/Playfair_Display/PlayfairDisplay-Regular.ttf);
+  }
+  @font-face {
+    font-family: "ubuntuLight";
+    src: url(../img/Ubuntu/Ubuntu-Light.ttf);
+  }
+  
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1062px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .nav_links {
+    list-style: none;
+  }
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .item {
+    display: inline-block;
+    margin-left: 50px;
+    padding-left: 50px;
+  }
+  
+  .u-light{
+    font-family: "ubuntuLight";
+    font-variant: small-caps;
+  }
+  .footer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding-left: 10px;
+  }
+  .term{
+    display: inline-block;
+    padding-left: 10px;
+  }
+  .page{
+    display: inline-block;
+    padding-right: 20px;
+  }
+  .layout{
+      display: flex;
+      
+      
+  }
+  .main-articles{
+      width: calc( 75% - 15px );
+      margin-right: 15px;
+  }
+  .aside{
+      width:25%;
+  }
+  .articles{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      background-color:dimgray;
+      align-items: center;
+  }
+  .article{
+      margin: 30px 10px 10px 10px;
+      width: max-content;
+  }
+  
