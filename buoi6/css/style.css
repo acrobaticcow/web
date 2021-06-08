@@ -1,0 +1,202 @@
+*{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    box-sizing: border-box;
+    font-family: "roboto", sans-serif;
+    font-weight: 300;
+    
+}
+/* font */
+@font-face {
+    font-family: "roboto";
+    src: url(../img/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: "rufina-00";
+    src: url(../img/Rufina/Rufina-Regular.ttf);
+}
+@font-face {
+    font-family: "rufina-01";
+    src: url(../img/Rufina/Rufina-Bold.ttf);
+}
+.rufina-00{
+    font-family: "rufina-00", sans-serif;
+}
+.rufina-01{
+    font-family: "rufina-01", sans-serif;
+}
+.roboto{
+    font-family: "roboto", sans-serif;
+}
+/*  */
+
+.header{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+    width: 1140px;
+    height: 77px;
+    font-family: "roboto", sans-serif;
+    font-size: 15px;
+    margin-bottom: 80px;
+}
+.container{
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.background{
+    background-image: url(../img/spa.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 40%;
+    overflow: visible;   
+}
+
+.header{
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+.menu{
+    display: flex;
+    flex-wrap: nowrap;
+    align-self: flex-end;
+    width: 75%;
+    justify-content: flex-start;    
+}
+.logo-container{
+    width:25%;
+    display: flex;
+    justify-content:flex-start;
+}
+.menu-item{
+    list-style: none;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.menu-link{
+    text-decoration: none;
+    color: inherit;
+}
+.menu-link:hover{
+    color: #ff9592;
+    transition: color;
+    transition-duration: 250ms;
+}
+.trailer-link{
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 16px 32px; 
+}
+.trailer-link:hover{
+    color: #ff9592;
+    transition: color;
+    transition-duration: 250ms;
+}
+.tittle{
+    font-size: 40px;
+    width: fit-content;
+    line-height: 80px;
+}
+
+.button{
+    padding: 20px 15px;
+    background-color: #ff817e;
+    border: none;
+    font-family: 'roboto';
+    color: white;
+}
+.button:hover{
+    color: black;
+}
+.input{
+    display: flex;
+    margin-bottom: 200px;
+}
+.sc-heading{
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+    text-align: center;
+}
+h3{
+    font-size: 45px;
+}
+.appointment-form{
+    display: flex;
+}
+.figure{
+    width: 40%;
+}
+.scheduled{
+    display: flex;
+    padding-left: 100px;
+    width: 60%;
+    background-color:#FFF9F8;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.form-omni{
+    width:650px;
+}
+.form-part{
+    display: flex;
+    width: inherit;
+}
+.form{
+    width: 50%;
+    
+}
+.sch-inp{
+    display: block;
+    width: 315px;
+    border: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid #555;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    background-color: #FFF9F8;
+}
+.text-area{
+    width: 630px;
+    background-color: #FFF9F8;
+    border: none;
+    border-bottom: 1px solid #555;
+    
+    
+}
+/* text-edit  */
+.mt-00{
+    margin-top: 0px;
+}
+.mb-20px{
+    margin-bottom: 20px;
+}
+.mb-50px{
+    margin-bottom: 50px;
+}
+
+.mtb-50px{
+    margin: 50px 0px;
+}
+.lh-2{
+    line-height: 2;
+}
+/*  */
+
+/* color */
+.pink{
+    color: #ff9592;
+}
+.dim{
+    color: #555;
+}
+/*  */
+
+ 
+
