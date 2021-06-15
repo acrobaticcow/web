@@ -219,7 +219,7 @@ nav {
 .banner {
   background-image: url(../img/bg-1.jpg);
   background-repeat: no-repeat;
-  width: 1519.2px;
+  /* width: 1519.2px; */
   height: 551.567px;
 }
 .feat-product {
