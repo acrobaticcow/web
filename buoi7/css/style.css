@@ -55,6 +55,7 @@ a{
 }
 .nav-item.wth-180{
     position: relative;
+    line-height: 27px;
     
 }
 .nav-item.wth-180:hover{
@@ -77,6 +78,9 @@ a{
     width: 180px;
     padding-top: 2px;
     padding-bottom: 2px;
+}
+.nav-item-sub-menu-item:hover{
+    color: #f36d00;
 }
 /*  */
 .sub-menu2{

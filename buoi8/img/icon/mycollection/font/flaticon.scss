@@ -1,0 +1,33 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?97973f15bd6ac8b0158e00a11d0a140d") format("truetype"),
+url("./flaticon.woff?97973f15bd6ac8b0158e00a11d0a140d") format("woff"),
+url("./flaticon.woff2?97973f15bd6ac8b0158e00a11d0a140d") format("woff2"),
+url("./flaticon.eot?97973f15bd6ac8b0158e00a11d0a140d#iefix") format("embedded-opentype"),
+url("./flaticon.svg?97973f15bd6ac8b0158e00a11d0a140d#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "visibility": "\f101",
+    "shopping-cart": "\f102",
+);
+
+.flaticon-visibility:before {
+    content: map-get($flaticon-map, "visibility");
+}
+.flaticon-shopping-cart:before {
+    content: map-get($flaticon-map, "shopping-cart");
+}
