@@ -374,6 +374,7 @@ nav {
 }
 .container.full-width{
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .product2-item:hover .action2-link {
   display: block;
@@ -405,5 +406,31 @@ nav {
   z-index: 9;
   display: none;  
 }
+/* feat-icon */
 
-
+.feature-wrapper{
+  width: calc(25% - 20px);
+}
+.feature-box{
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ebeef0;
+}
+.feat-icon{
+  margin-bottom:25px;
+}
+.feature-box h5{
+  font-size: 15px;
+font-weight: 1000;
+  margin-bottom: 10px;
+}
+.feature-box p {
+  margin-bottom: 0;
+color: #888;
+line-height: 18px;
+}
+.feature {
+  padding: 50px 0px;
+}
