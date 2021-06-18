@@ -434,3 +434,218 @@ line-height: 18px;
 .feature {
   padding: 50px 0px;
 }
+/* JOURNAL  */
+.post-item{
+  width: calc(100% / 3);
+  padding: 0px 15px;
+}
+.post-item img {
+  width: 100%;
+}
+.post-content {
+  position : relative;
+}
+.post-title {
+font-size: 20px;
+line-height: 30px;
+border-bottom: 1px solid #e1e1e1;
+padding-bottom: 20px;
+margin-bottom: 20px;
+}
+.date {
+  padding-left: 22px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #888;
+}
+.date::before {
+  content: '';
+  position: absolute;
+  background-color: #ff5353;
+  border-radius: 2px;
+  width: 12px;
+  height: 6px;
+  top: 10px;
+  left: 1px;
+}
+.tag a {
+  font-size: 14px;
+    font-weight: 400;
+    color: #888;
+}
+.catagory {
+  margin-right: 20px;
+}
+.journal {
+  margin: 50px 0px;
+}
+
+
+
+/* INSTAGRAM */
+
+
+.follow{
+  padding: 50px 0px;
+  
+}
+.instagram{
+  position: relative;
+  width: 23%;
+}
+.instagram img {
+  width: 100%;
+}
+.instagram a::before {
+content: '';
+position: absolute;
+top: 30px;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(255, 83, 83, 0.7);
+height: 100%;
+width: 100%;
+transition: all 300ms ease;
+animation: slideUp 300ms ease forwards;
+display: none;
+opacity: 0;
+overflow: hidden;
+}
+.instagram a {
+  display: block;
+  padding: 0;
+}
+
+.instagram a i {
+color:#fff;
+font-size: 30px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+transition: all 450ms ease-in-out;
+display: none;
+}
+@keyframes slideUp {
+  from { transform:translateY(30px);}
+  to { transform:translateY(-30px);}
+}
+ .instagram:hover.instagram a::before  {
+  display: block;
+  opacity: 1;
+}
+.instagram:hover .ti-instagram {
+  display:block;
+}
+/* Footer */
+footer {
+  background-color: #E9E2D8;
+}
+.widget{
+  display:flex;
+  padding: 80px 0px;
+}
+.wdiget-nav{
+  display: inline-block;
+}
+.widget-nav ul {
+  display: inline-block;
+}
+.widget-layout:not(:first-child){
+  margin-left: 94.9833px;
+}
+.widget-layout{
+  padding: 0px 15px;
+}
+.widget-title{
+  margin-bottom: 25px;
+}
+.android {
+  display: inline-flex;
+  position: relative;
+  flex-basis: 49%;
+  padding: 12px 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding-left: 35px;
+}
+.apple {
+  position: relative;
+  display:inline-flex;
+  flex-basis: 49%;
+  padding: 12px 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  background-color: #ff5353;
+  padding-left: 35px;
+}
+.ti-android {
+color: #ff5353;
+font-size: 20px;
+margin-right: 5px;
+position: absolute;
+left: 7px;
+top: 50%;
+transform: translateY(-50%);
+}
+.ti-apple {
+color: #fff;
+font-size: 20px;
+margin-right: 5px;
+position: absolute;
+left: 7px;
+top: 50%;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+.app-btn{
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-bottom: 0.8px solid #d6d8d9;
+}
+.app-btn a p span {
+display: block;
+font-size: 10px;
+font-weight: 400;
+color: #4a4a4a;
+line-height: .8;
+margin-bottom: 5px;
+}
+.app-btn a p {
+margin-bottom: 0;
+color: #000;
+font-size: 13px;
+font-weight: 500;
+line-height: .8;
+text-transform: uppercase;
+}
+.apple span {
+  color: #fff!important;
+}
+.apple p {
+  color: #fff!important;
+}
+.social-media a{
+display: inline-block;
+font-size: 14px;
+color: #000;
+background-color: #fff;
+line-height: 32px;
+text-align: center;
+height: 30px;
+width: 30px;
+}
+.social-media a:not(:last-child) {
+  margin-right: 10px;
+}
+.copyright {
+padding: 20px 0;
+text-align: center;
+color: #888;
+margin-bottom: 0;
+border-top: 0.8px #d6d8d9 solid  
+}
+.copyright p a {
+  color: #ff5353;
+}
