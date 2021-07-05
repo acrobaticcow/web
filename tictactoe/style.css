@@ -1,0 +1,153 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+:root{
+--cell-size: 100px;
+--mark-size: calc(var(--cell-size) * .9);
+}
+.background{
+    color: midnightblue;
+    padding-top: 1px;
+    margin-top: 100px;
+}
+
+.title{
+    color: black;
+    text-align: center;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.container{
+display:grid;
+grid-template-columns: repeat(3 , auto);
+justify-items: center;
+align-items: center;
+}
+.tile{
+    border: 1px solid;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.tile:first-child,
+.tile:nth-child(2),
+.tile:nth-child(3) {
+    border-top: 0px;
+}
+
+.tile:nth-child(7),
+.tile:nth-child(8),
+.tile:last-child {
+    border-bottom: 0px;
+}
+
+.tile:nth-child(3n + 1) {
+    border-left: 0px;
+}
+
+.tile:nth-child(3n + 3) {
+    border-right: 0px;
+}
+
+.tile.x::before,
+.tile.x::after,
+.container.x .tile:not(.x):not(.o):hover::before, 
+.container.x .tile:not(.x):not(.o):hover::after{
+    content: "";
+    background-color:black;
+    height: var(--mark-size) ;
+    width: calc(var(--mark-size) * .15);
+    justify-content: center;
+    align-content: center;
+    position: absolute;   
+}
+.tile.x::before, 
+.container.x .tile:not(.x):not(.o):hover::before {
+    transform: rotate(45deg);
+}
+.tile.x::after,  
+.container.x .tile:not(.x):not(.o):hover::after{
+    transform: rotate(-45deg);
+}
+
+.tile.o::before,
+.container.o .tile:not(.x):not(.o):hover::before {
+    content: "";
+    background-color: black;
+    height: var(--mark-size) ;
+    width: var(--mark-size);
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.tile.o::after, 
+.container.o .tile:not(.x):not(.o):hover::after {
+    content: "";
+    background-color: white;
+    height: calc(var(--mark-size) * .7) ;
+    width: calc(var(--mark-size) * .7);
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    border-radius: 50%;  
+}
+
+.container.x .tile:not(.x):not(.o):hover::before, 
+.container.x .tile:not(.x):not(.o):hover::after {
+    background-color: lightgray;
+}
+.container.o .tile:not(.x):not(.o):hover::before {
+    background-color: lightgray;
+}
+.container.o .tile:not(.x):not(.o):hover::after {
+    background-color: white;
+}
+
+
+.reset{
+    background-color:white;
+    padding: 15px 30px 15px 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: large;
+}
+.reset:hover{
+    background-color:black;
+    color: white;
+    border: 1px solid white;
+}
+
+.announcer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0 , 0 , 0, 0.9);
+    flex-direction: column;
+    visibility: hidden;
+}
+.announcer-message{
+    color: white;
+    font-size: xx-large;
+    margin-bottom: 10px;  
+}
+.show{
+    visibility: visible;
+}
