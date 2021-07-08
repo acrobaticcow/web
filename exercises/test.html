@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Basic Operators</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div id="mocha"></div>
+
+        <script src="https://unpkg.com/chai/chai.js"></script>
+        <script src="https://unpkg.com/mocha/mocha.js"></script>
+
+        <script class="mocha-init">
+            window.assert = chai.assert;
+            mocha.setup("bdd");
+            mocha.checkLeaks();
+        </script>
+
+        <script src="js/exercises.js"></script>
+        <!-- <script src="js/solution.js"></script> -->
+        <script src="js/exercises.test.js"></script>
+        <script class="mocha-exec">
+            mocha.run();
+        </script>
+    </body>
+</html>

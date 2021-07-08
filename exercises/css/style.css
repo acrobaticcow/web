@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#mocha {
+    font-family: "Nunito", sans-serif;
+}
+
+.suite {
+    margin-bottom: 15px !important;
+}
+
+#mocha h1 {
+    font-weight: 600;
+}
+
+#mocha h2 {
+    font-size: 16px;
+}
