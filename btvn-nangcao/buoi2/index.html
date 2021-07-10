@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../buoi2/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../buoi2/icon&font/themify-icons.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../buoi2/splide-2.4.21/splide-2.4.21/dist/css/splide-core.min.css">
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="site-navigation">
+          <div class="row">
+            <div
+              class="
+                logo
+                align-self-center
+                col-md-6
+                order-1 order-md-2
+                mb-3 mb-md-0
+                text-center
+              "
+            >
+              MAGDESIGN
+            </div>
+            <div class="col-md-3 order-3 order-md-1">
+              <form action="#" class="search-form d-flex">
+                <span class="ti-search"></span>
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Search..."
+                />
+              </form>
+            </div>
+            <div
+              class="
+                col-md-3
+                align-self-center
+                text-end
+                order-2 order-md-3
+                mb-3 mb-md-0
+              "
+            >
+              <div class="d-flex justify-content-between">
+                <ul
+                  class="
+                    list-group list-group-horizontal
+                    align-items-center
+                    social
+                  "
+                >
+                  <li>
+                    <a href="#"><span class="ti-twitter"></span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="ti-facebook"></span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="ti-instagram"></span></a>
+                  </li>
+                </ul>
+                <div class="side-nav">
+                  <div id="mainbox" onclick="openFunction()">&#9776;</div>
+                  <div id="menu" class="sidemenu">
+                    <a href="#">Home</a>
+                    <a href="#">Catergories</a>
+                    <a href="#">Travel</a>
+                    <a href="#">Food</a>
+                    <a href="#">Technology</a>
+                    <a href="#">Business</a>
+                    <a href="#" class="closebtn" onclick="closeFunction()"
+                      >&times;</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="pt-5 pb-0">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-7 text-center">
+            <h2 class="heading">Trending</h2>
+          </div>
+        </div>
+        <div id="myCarousel" data-bs-ride="carousel" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div data-bs-interval="2000" class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <img
+                    class="d-block w-100 rounded"
+                    src="../buoi2/img/1.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="col-md-8 align-self-center">
+                  <div class="content">
+                    <div class="post-meta mb-3">
+                      <a href="#" class="category">Business</a>,
+                      <a href="#" class="category">Travel</a> —
+                      <span class="date">July 2, 2020</span>
+                    </div>
+                    <h2 class="heading">
+                      <a href="#"
+                        >Your most unhappy customers are your greatest source of
+                        learning.</a
+                      >
+                    </h2>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia, there live the blind
+                      texts. Separated they live in Bookmarksgrove right at the
+                      coast of the Semantics, a large language ocean.
+                    </p>
+                    <a href="#" class="post-author d-flex align-items-center">
+                      <div class="author-pic">
+                        <img
+                          class="rounded-circle w-100"
+                          src="../buoi2/img/avatar-1.webp"
+                          alt="Image"
+                        />
+                      </div>
+                      <div class="text">
+                        <strong>Sergy Campbell</strong>
+                        <br />
+                        <span>CEO and Founder</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-bs-interval="2000" class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <img
+                    class="d-block w-100 rounded"
+                    src="../buoi2/img/2.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="col-md-8 align-self-center">
+                  <div class="content">
+                    <div class="post-meta mb-3">
+                      <a href="#" class="category">Business</a>,
+                      <a href="#" class="category">Travel</a> —
+                      <span class="date">July 2, 2020</span>
+                    </div>
+                    <h2 class="heading">
+                      <a href="#"
+                        >Your most unhappy customers are your greatest source of
+                        learning.</a
+                      >
+                    </h2>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia, there live the blind
+                      texts. Separated they live in Bookmarksgrove right at the
+                      coast of the Semantics, a large language ocean.
+                    </p>
+                    <a href="#" class="post-author d-flex align-items-center">
+                      <div class="author-pic">
+                        <img
+                          class="rounded-circle w-100"
+                          src="../buoi2/img/avatar-1.webp"
+                          alt="Image"
+                        />
+                      </div>
+                      <div class="text">
+                        <strong>Sergy Campbell</strong>
+                        <br />
+                        <span>CEO and Founder</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-bs-interval="2000" class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <img
+                    class="d-block w-100 rounded"
+                    src="../buoi2/img/3.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="col-md-8 align-self-center">
+                  <div class="content">
+                    <div class="post-meta mb-3">
+                      <a href="#" class="category">Business</a>,
+                      <a href="#" class="category">Travel</a> —
+                      <span class="date">July 2, 2020</span>
+                    </div>
+                    <h2 class="heading">
+                      <a href="#"
+                        >Your most unhappy customers are your greatest source of
+                        learning.</a
+                      >
+                    </h2>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia, there live the blind
+                      texts. Separated they live in Bookmarksgrove right at the
+                      coast of the Semantics, a large language ocean.
+                    </p>
+                    <a href="#" class="post-author d-flex align-items-center">
+                      <div class="author-pic">
+                        <img
+                          class="rounded-circle w-100"
+                          src="../buoi2/img/avatar-1.webp"
+                          alt="Image"
+                        />
+                      </div>
+                      <div class="text">
+                        <strong>Sergy Campbell</strong>
+                        <br />
+                        <span>CEO and Founder</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-bs-interval="2000" class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <img
+                    class="d-block w-100 rounded"
+                    src="../buoi2/img/4.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="col-md-8 align-self-center">
+                  <div class="content">
+                    <div class="post-meta mb-3">
+                      <a href="#" class="category">Business</a>,
+                      <a href="#" class="category">Travel</a> —
+                      <span class="date">July 2, 2020</span>
+                    </div>
+                    <h2 class="heading">
+                      <a href="#"
+                        >Your most unhappy customers are your greatest source of
+                        learning.</a
+                      >
+                    </h2>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia, there live the blind
+                      texts. Separated they live in Bookmarksgrove right at the
+                      coast of the Semantics, a large language ocean.
+                    </p>
+                    <a href="#" class="post-author d-flex align-items-center">
+                      <div class="author-pic">
+                        <img
+                          class="rounded-circle w-100"
+                          src="../buoi2/img/avatar-1.webp"
+                          alt="Image"
+                        />
+                      </div>
+                      <div class="text">
+                        <strong>Sergy Campbell</strong>
+                        <br />
+                        <span>CEO and Founder</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="post-entry d-block small-post-entry-v">
+              <div class="thumbnail">
+                <a href="#">
+                  <img
+                    class="rounded w-100"
+                    src="../buoi2/img/5.webp"
+                    alt="Image"
+                    class="img-fluid"
+                  />
+                </a>
+              </div>
+              <div class="content">
+                <div class="post-meta mb-1">
+                  <a href="#" class="category">Business</a>,
+                  <a href="#" class="category">Travel</a> —
+                  <span class="date">July 2, 2020</span>
+                </div>
+                <h2 class="heading mb-3">
+                  <a href="#"
+                    >Your most unhappy customers are your greatest source of
+                    learning.</a
+                  >
+                </h2>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <a href="#" class="post-author d-flex align-items-center">
+                  <div class="author-pic">
+                    <img
+                      class="rounded-circle w-100"
+                      src="../buoi2/img/avatar-1.webp"
+                      alt="Image"
+                    />
+                  </div>
+                  <div class="text">
+                    <strong>Sergy Campbell</strong>
+                    <span>CEO and Founder</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="post-entry d-block small-post-entry-v">
+              <div class="thumbnail">
+                <a href="#">
+                  <img
+                    class="rounded w-100"
+                    src="../buoi2/img/6.webp"
+                    alt="Image"
+                    class="img-fluid"
+                  />
+                </a>
+              </div>
+              <div class="content">
+                <div class="post-meta mb-1">
+                  <a href="#" class="category">Business</a>,
+                  <a href="#" class="category">Travel</a> —
+                  <span class="date">July 2, 2020</span>
+                </div>
+                <h2 class="heading mb-3">
+                  <a href="#"
+                    >Your most unhappy customers are your greatest source of
+                    learning.</a
+                  >
+                </h2>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <a href="#" class="post-author d-flex align-items-center">
+                  <div class="author-pic">
+                    <img
+                      class="rounded-circle w-100"
+                      src="../buoi2/img/avatar-1.webp"
+                      alt="Image"
+                    />
+                  </div>
+                  <div class="text">
+                    <strong>Sergy Campbell</strong>
+                    <span>CEO and Founder</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="post-entry d-block small-post-entry-v">
+              <div class="thumbnail">
+                <a href="#">
+                  <img
+                    class="rounded w-100"
+                    src="../buoi2/img/7.webp"
+                    alt="Image"
+                    class="img-fluid"
+                  />
+                </a>
+              </div>
+              <div class="content">
+                <div class="post-meta mb-1">
+                  <a href="#" class="category">Business</a>,
+                  <a href="#" class="category">Travel</a> —
+                  <span class="date">July 2, 2020</span>
+                </div>
+                <h2 class="heading mb-3">
+                  <a href="#"
+                    >Your most unhappy customers are your greatest source of
+                    learning.</a
+                  >
+                </h2>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <a href="#" class="post-author d-flex align-items-center">
+                  <div class="author-pic">
+                    <img
+                      class="rounded-circle w-100"
+                      src="../buoi2/img/avatar-1.webp"
+                      alt="Image"
+                    />
+                  </div>
+                  <div class="text">
+                    <strong>Sergy Campbell</strong>
+                    <span>CEO and Founder</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="post-entry d-block small-post-entry-v">
+              <div class="thumbnail">
+                <a href="#">
+                  <img
+                    class="rounded w-100"
+                    src="../buoi2/img/8.webp"
+                    alt="Image"
+                    class="img-fluid"
+                  />
+                </a>
+              </div>
+              <div class="content">
+                <div class="post-meta mb-1">
+                  <a href="#" class="category">Business</a>,
+                  <a href="#" class="category">Travel</a> —
+                  <span class="date">July 2, 2020</span>
+                </div>
+                <h2 class="heading mb-3">
+                  <a href="#"
+                    >Your most unhappy customers are your greatest source of
+                    learning.</a
+                  >
+                </h2>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <a href="#" class="post-author d-flex align-items-center">
+                  <div class="author-pic">
+                    <img
+                      class="rounded-circle w-100"
+                      src="../buoi2/img/avatar-1.webp"
+                      alt="Image"
+                    />
+                  </div>
+                  <div class="text">
+                    <strong>Sergy Campbell</strong>
+                    <span>CEO and Founder</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="post-entry d-block small-post-entry-v">
+              <div class="thumbnail">
+                <a href="#">
+                  <img
+                    class="rounded w-100"
+                    src="../buoi2/img/9.webp"
+                    alt="Image"
+                    class="img-fluid"
+                  />
+                </a>
+              </div>
+              <div class="content">
+                <div class="post-meta mb-1">
+                  <a href="#" class="category">Business</a>,
+                  <a href="#" class="category">Travel</a> —
+                  <span class="date">July 2, 2020</span>
+                </div>
+                <h2 class="heading mb-3">
+                  <a href="#"
+                    >Your most unhappy customers are your greatest source of
+                    learning.</a
+                  >
+                </h2>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <a href="#" class="post-author d-flex align-items-center">
+                  <div class="author-pic">
+                    <img
+                      class="rounded-circle w-100"
+                      src="../buoi2/img/avatar-1.webp"
+                      alt="Image"
+                    />
+                  </div>
+                  <div class="text">
+                    <strong>Sergy Campbell</strong>
+                    <span>CEO and Founder</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="post-entry d-block small-post-entry-v">
+              <div class="thumbnail">
+                <a href="#">
+                  <img
+                    class="rounded w-100"
+                    src="../buoi2/img/5.webp"
+                    alt="Image"
+                    class="img-fluid"
+                  />
+                </a>
+              </div>
+              <div class="content">
+                <div class="post-meta mb-1">
+                  <a href="#" class="category">Business</a>,
+                  <a href="#" class="category">Travel</a> —
+                  <span class="date">July 2, 2020</span>
+                </div>
+                <h2 class="heading mb-3">
+                  <a href="#"
+                    >Your most unhappy customers are your greatest source of
+                    learning.</a
+                  >
+                </h2>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <a href="#" class="post-author d-flex align-items-center">
+                  <div class="author-pic">
+                    <img
+                      class="rounded-circle w-100"
+                      src="../buoi2/img/avatar-1.webp"
+                      alt="Image"
+                    />
+                  </div>
+                  <div class="text">
+                    <strong>Sergy Campbell</strong>
+                    <span>CEO and Founder</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-7 text-center">
+            <h2 class="heading">Most Popular Posts</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 overflow-visible">
+            <div
+              id="myCarousel2"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#myCarousel2"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#myCarousel2"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#myCarousel2"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="thumbnail">
+                    <a href="#">
+                      <img
+                        class="rounded w-100"
+                        src="../buoi2/img/5.webp"
+                        alt="Image"
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                  <div class="content">
+                    <div class="post-meta mb-1">
+                      <a href="#" class="category">Business</a>,
+                      <a href="#" class="category">Travel</a> —
+                      <span class="date">July 2, 2020</span>
+                    </div>
+                    <h2 class="heading mb-3">
+                      <a href="#"
+                        >Your most unhappy customers are your greatest source of
+                        learning.</a
+                      >
+                    </h2>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia, there live the blind
+                      texts.
+                    </p>
+                    <a href="#" class="post-author d-flex align-items-center">
+                      <div class="author-pic">
+                        <img
+                          class="rounded-circle w-100"
+                          src="../buoi2/img/avatar-1.webp"
+                          alt="Image"
+                        />
+                      </div>
+                      <div class="text">
+                        <strong>Sergy Campbell</strong>
+                        <span>CEO and Founder</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="thumbnail">
+                    <a href="#">
+                      <img
+                        class="rounded w-100"
+                        src="../buoi2/img/5.webp"
+                        alt="Image"
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                  <div class="content">
+                    <div class="post-meta mb-1">
+                      <a href="#" class="category">Business</a>,
+                      <a href="#" class="category">Travel</a> —
+                      <span class="date">July 2, 2020</span>
+                    </div>
+                    <h2 class="heading mb-3">
+                      <a href="#"
+                        >Your most unhappy customers are your greatest source of
+                        learning.</a
+                      >
+                    </h2>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia, there live the blind
+                      texts.
+                    </p>
+                    <a href="#" class="post-author d-flex align-items-center">
+                      <div class="author-pic">
+                        <img
+                          class="rounded-circle w-100"
+                          src="../buoi2/img/avatar-1.webp"
+                          alt="Image"
+                        />
+                      </div>
+                      <div class="text">
+                        <strong>Sergy Campbell</strong>
+                        <span>CEO and Founder</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="thumbnail">
+                    <a href="#">
+                      <img
+                        class="rounded w-100"
+                        src="../buoi2/img/5.webp"
+                        alt="Image"
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                  <div class="content">
+                    <div class="post-meta mb-1">
+                      <a href="#" class="category">Business</a>,
+                      <a href="#" class="category">Travel</a> —
+                      <span class="date">July 2, 2020</span>
+                    </div>
+                    <h2 class="heading mb-3">
+                      <a href="#"
+                        >Your most unhappy customers are your greatest source of
+                        learning.</a
+                      >
+                    </h2>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia, there live the blind
+                      texts.
+                    </p>
+                    <a href="#" class="post-author d-flex align-items-center">
+                      <div class="author-pic">
+                        <img
+                          class="rounded-circle w-100"
+                          src="../buoi2/img/avatar-1.webp"
+                          alt="Image"
+                        />
+                      </div>
+                      <div class="text">
+                        <strong>Sergy Campbell</strong>
+                        <span>CEO and Founder</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#myCarousel2"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#myCarousel2"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src='../buoi2/splide-2.4.21/splide-2.4.21/dist/js/splide.min.js'></script>
+    <script src="../buoi2/script.js"></script>
+  </body>
+</html>
