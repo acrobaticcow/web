@@ -81,7 +81,7 @@ function endGame(draw) {
         message.innerText = 'DRAW!'
 
     } else {
-        displayPlayer[1].innerText = `${playerTurn == X_CLASS ? 'long loz' : 'anh dz'}`
+        displayPlayer[1].innerText = `${playerTurn  ? 'O' : 'X'}`
     }
     announcer.classList.add('show')
 }
