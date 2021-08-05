@@ -1,0 +1,18 @@
+ @media (min-width: 600px) {
+     .container-fluid{
+         max-width: 600px !important;
+     }
+ }
+
+ body{
+     display:flex;
+     align-items: center;
+     height: 100vh !important;
+ }
+
+ .minutes {
+     text-align: center;
+ }
+ .seconds{
+     text-align: center;
+ }

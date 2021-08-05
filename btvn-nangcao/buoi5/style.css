@@ -1,0 +1,112 @@
+body{
+    margin-top:50px;
+}
+.container-sm{
+    width: 414px !important;
+    border: 1px solid black !important;
+    border-radius: 6px !important;
+}
+li {
+    list-style: none;
+    margin-left: 10px;;
+}
+.task-list .wrapper input {
+    
+    margin-right:10px;
+}
+
+.calendar{
+    margin-top:25px;
+    margin-bottom:20px;
+}
+.calendar span {
+    font-size:46px;
+    cursor:pointer;
+}
+.calendar span:hover {
+    background-color:black;
+    color:white;
+}
+input{
+    border: none;
+    cursor: pointer;
+}
+/* .counter span:not(.icon span){
+    display:inline-flex;
+    width: 15px;
+    height: 15px;   
+    border: 1px solid black;
+    border-radius:50%;
+    background-color:black;
+    color:white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+} */
+.counter:after{
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 2px;
+    right: -6px;
+    z-index: -1;
+}
+.unfinished{
+    margin-bottom:16px;
+}
+.counter{
+    color:white;
+    position: relative;
+    font-weight: 515px;
+    font-size: 15px;
+}
+.task-counter p{
+    margin-right:20px;
+    margin-bottom:0px;
+}
+.task-counter + hr {
+    margin-top:5px;
+    margin-bottom: 18px;
+}
+.add-task .wrapper{
+    height: 32px;
+}
+.add-task{
+    margin-bottom: 80px;
+}
+#task-box{
+    height:30px;  
+}
+#task-box:hover::placeholder{
+    color:black;
+    font-style: italic;
+    font-weight: 500;   
+}
+ #task-box:focus{
+    border: 1px solid black;
+    border-radius:20px;
+    padding-left:10px;
+} 
+.task-list .wrapper{
+    margin-bottom: 5px;
+}
+.icon{
+    display:flex;
+    justify-content:end;
+}
+.icon span{
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+}
+.finished + hr {
+    
+    margin-bottom: 20px;
+}
+.delete-btn{
+    cursor: pointer;
+}

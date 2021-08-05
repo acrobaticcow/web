@@ -1,0 +1,21 @@
+.post{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.user{
+    display:flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items:center;
+    margin-top: 20px;
+}
+
+img {
+    width: 162px;
+    height: 162px;
+}
+
+button {
+    margin: 0 auto;
+}

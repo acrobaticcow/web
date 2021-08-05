@@ -1,0 +1,52 @@
+@media (min-width: 600px) {
+  .container-fluid {
+    max-width: 600px !important;
+    height: 100vh !important;
+  }
+}
+
+body {
+  background: rgb(36, 51, 122);
+  background: radial-gradient(
+    circle,
+    rgba(36, 51, 122, 1) 0%,
+    rgba(105, 52, 95, 1) 85%,
+    rgba(105, 52, 95, 1) 88%
+  );
+}
+
+.calculator {
+  width: 200px;
+  border: 20%;
+}
+
+button {
+  height: 56px;
+  border: 1px solid white !important;
+  background-color: rgba(248, 248, 255, 0.75);
+}
+button:hover {
+  background-color: rgb(248, 255, 255, 0.9);
+}
+button:active {
+  box-shadow: 1px -1px 11px -9px rgba(0, 0, 0, 0.75) inset;
+}
+.output {
+  min-height: 65px; 
+  background: rgb(73, 73, 78);
+  background: linear-gradient(
+    90deg,
+    rgba(73, 73, 78, 1) 0%,
+    rgba(164, 139, 160, 1) 85%
+  );
+}
+
+.output div {
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;   
+}
+
+.current-operant {
+    font-size: 1.5rem;
+}
