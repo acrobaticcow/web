@@ -1,0 +1,103 @@
+<!-- CODE EXPLAINED CHANNEL -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript - To Do List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header">
+            <div class="row">
+              <div class="col-8">
+                <div class="date-wrapper">
+                  <div class="row">
+                    <div class="col-12">
+                      <span class="day"></span>
+                    </div>
+                    <div class="col-12" style="margin-bottom: 30px">
+                      <span class="date"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 align-self-center">
+                <div class="d-flex justify-content-end">
+                  <div class="icon-calenra">
+                    <i class="bi bi-calendar3" style="font-size: 3rem"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="header bd-b">
+          <p class="label d-flex">
+            Việc cần làm
+            <span
+              class="
+                todo-number
+                d-flex
+                justify-content-center
+                align-items-center
+              "
+            ></span>
+          </p>
+        </div>
+      </div>
+      <div class="content">
+        <ul id="list"></ul>
+      </div>
+
+      <div class="add-to-do">
+        <input
+          type="text"
+          id="input"
+          class="todo-input"
+          placeholder="Bạn muốn làm gì?"
+        />
+
+        <button class="btn-cancel">
+          <i class="bi bi-x-circle-fill"></i>
+        </button>
+      </div>
+      <button class="btn-add" style="margin-bottom: 90px">
+        <i class="bi bi-plus-circle-fill de"></i>
+        Thêm công việc mới
+      </button>
+      <div class="todo-list">
+      </div>
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
