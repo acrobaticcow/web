@@ -2,6 +2,7 @@ const button = document
   .querySelector("#user")
   .addEventListener("click", loadUser);
 
+  
 function loadUser() {
   let xhr = new XMLHttpRequest();
   xhr.open("GET", "https://reqres.in/api/users?page=2", true);
@@ -24,3 +25,4 @@ function loadUser() {
 
   xhr.send();
 }
+

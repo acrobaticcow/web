@@ -1,0 +1,30 @@
+img {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.col-3{
+    padding: 5px !important;
+}
+
+body {
+    background: #7b4397;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.tittle{
+    color: #B2FFFF;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+}
+
+form button {
+    background-color: #9e1b32!important;
+    border-color: #FBCEB1 !important;
+}
+
+form button:active {
+    box-shadow:  0 0 15px rgba(255,255,255,.5)  !important;
+}

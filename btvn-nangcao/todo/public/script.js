@@ -20,6 +20,10 @@ let todos = await fetch("/todos").then((response) => response.json());
   );
 })();
 
+function x () {
+
+}
+
 const btnDel = document.querySelector("[data-delete]");
 
 function addTask() {
@@ -54,16 +58,7 @@ function addTask() {
 function deleteTask() {
   fetch(`/todos/${btnDel.dataset.doc}`, {
     method: "DELETE",
-    header: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      title: "Công việc mới",
-      completed: false,
-      task: todoInput.value,
-    }),
   })
-    .then((response) => response.json())
     .then(() => {
       document.querySelector(
         `[data-doc = "${btnDel.dataset.doc}"]`
