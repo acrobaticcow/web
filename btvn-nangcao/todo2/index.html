@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>todo</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header>
+        <div class="row ms-1">
+          <div class="col-8">
+            <h1 class="day">Monday,</h1>
+            <h4 class="date">01 Tháng 1, 2021</h4>
+          </div>
+          <div class="col-4 text-left">
+            <img src="./decor/calendar3.svg" />
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="current-task mt-3">
+          <div class="header d-flex ms-3">
+            <span>Chưa hoàn thành</span>
+            <p class="counter ms-2">0</p>
+          </div>
+          <hr />
+          <div class="current-task-display">
+            <form class="tasks ms-3">
+            </form>
+          </div>
+          <div class="user-input mt-3 ms-3">
+            <form>
+              <input
+                placeholder="Bạn muốn làm gì ?"
+                class="user-text"
+                type="text"
+              />
+              <button class="submit">
+                <img src="./decor/plus-circle-fill.svg" />
+              </button>
+            </form>
+          </div>
+          <hr />
+          <div class="fininshed-task">
+            <div class="header d-flex ms-3">
+              <span>Đã hoàn thành</span>
+              <p class="f-counter ms-2">0</p>
+              <button class="btn delete btn-default">delete</button>
+            </div>
+            <div class="finished-task-display">
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

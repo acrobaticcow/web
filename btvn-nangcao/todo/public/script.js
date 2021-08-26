@@ -20,9 +20,6 @@ let todos = await fetch("/todos").then((response) => response.json());
   );
 })();
 
-function x () {
-
-}
 
 const btnDel = document.querySelector("[data-delete]");
 

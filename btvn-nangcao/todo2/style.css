@@ -1,0 +1,44 @@
+@media (min-width: 420px) {
+  .container-fluid {
+    max-width: 420px !important;
+    padding-top: 70px;
+  }
+}
+
+.counter, .f-counter {
+background-color:black;
+color: white;
+width: 24px;
+height: 24px;
+text-align: center;
+vertical-align: middle;
+border-radius:50%;
+font-size:1rem;
+margin-bottom: 0px;
+}
+
+hr{
+    margin-top: 10px;
+}
+
+.tasks label{
+  margin-bottom: 5px; 
+}
+.current-task-display {
+  min-height: 100px;
+}
+.user-text {
+  border: none !important;
+  width: 70% !important;
+}
+.user-text:active{
+  border-color: black !important;
+}
+.submit {
+ 
+background-color: transparent; /* Remove background color */
+ 
+border: none;
+ 
+border-radius: 5px; 
+}
