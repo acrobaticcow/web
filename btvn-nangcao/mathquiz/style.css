@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+body {
+  font-family: "Luckiest Guy", cursive;
+ 
+}
+
+.container-fluid {
+  width: 100vw;
+}
+
+.header {
+  background-color: #ff5959;
+  color: #f9f3f3;
+  height: 90px;
+  margin-bottom: 100px;
+}
+.logo {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+.navigation div:not(img) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 24px;
+  position: relative;
+}
+
+.navigation div:hover {
+    color: black;
+}
+.navigation div:active {
+    color: #f9f3f3;
+}
+.navigation div img {
+  position: absolute;
+  top: 50px;
+  left: -11px;
+}
+.quiz {
+  margin-bottom: 20px;
+}
+.quiz div {
+  font-size: 120px;
+  line-height: 160px;
+  margin-right: 40px;
+}
+
+.answers {
+  font-size: 90px;
+  line-height: 90px;
+}
+.answers div {
+  width: 258.99px;
+  height: 123.12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8eeee;
+}
+
+.answers div:not(:last-child) {
+  margin-right: 70px;
+}
+
+.answer3 {
+  transform: rotate(5.57deg);
+}
+
+.answer1 {
+  transform: rotate(-3.95deg);
+}
