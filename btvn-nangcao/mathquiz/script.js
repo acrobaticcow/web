@@ -62,8 +62,8 @@ $(function () {
       : (trueResult = parseFloat((firstNumber / secondNumber).toFixed(1)));
     let randomResult_1;
     let randomResult_2;
-    randomResult_1 = generateNumbers();
-    randomResult_2 = generateNumbers();
+    randomResult_1 = trueResult + 3;
+    randomResult_2 = trueResult - 2;
     const answerArray = [trueResult, randomResult_1, randomResult_2];
     const shuffledAnswerArray = answerArray.sort((a, b) => 0.5 - Math.random());
     if (
