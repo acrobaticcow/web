@@ -15,7 +15,12 @@ $(function () {
     clearHTML(quizDisplayBlock);
     firstNumber = generateNumbers();
     secondNumber = generateNumbers();
-    if (firstNumber > secondNumber && firstNumber % secondNumber == 0 && firstNumber < 20) {
+    if (
+      firstNumber > secondNumber &&
+      firstNumber % secondNumber == 0 &&
+      firstNumber < 20 &&
+      secondNumber > 1
+    ) {
       let number1 = $("<div></div")
         .appendTo(quizDisplayBlock)
         .addClass("number1")
@@ -84,8 +89,6 @@ $(function () {
       answer = trueResult;
       currentOperant = operand;
       findingAnswer();
-
-      // console.log(answerArray, randomResult_1, randomResult_2);
       return answer, currentOperant;
     } else renderResult(operand);
   }
@@ -130,15 +133,15 @@ $(function () {
         $(".result").text(`${answer}`);
         $(".assess").text("correct");
         setTimeout(() => {
-          clearHTML($(".assess"))
+          clearHTML($(".assess"));
           renderQuiz(currentOperant);
           renderResult(currentOperant);
         }, 1000);
       } else {
-         $(".assess").text("incorrect");
-         setTimeout(() =>{
-           clearHTML($(".assess"))
-         }, 1000)
+        $(".assess").text("incorrect");
+        setTimeout(() => {
+          clearHTML($(".assess"));
+        }, 1000);
       }
     });
     $(".answer2").on("click", (ev) => {
@@ -147,15 +150,15 @@ $(function () {
         $(".result").text(`${answer}`);
         $(".assess").text("correct");
         setTimeout(() => {
-          clearHTML($(".assess"))
+          clearHTML($(".assess"));
           renderQuiz(currentOperant);
           renderResult(currentOperant);
         }, 1000);
       } else {
         $(".assess").text("incorrect");
-        setTimeout(() =>{
-          clearHTML($(".assess"))
-        }, 1000)
+        setTimeout(() => {
+          clearHTML($(".assess"));
+        }, 1000);
       }
     });
     $(".answer3").on("click", (ev) => {
@@ -164,15 +167,15 @@ $(function () {
         $(".result").text(`${answer}`);
         $(".assess").text("correct");
         setTimeout(() => {
-          clearHTML($(".assess"))
+          clearHTML($(".assess"));
           renderQuiz(currentOperant);
           renderResult(currentOperant);
         }, 1000);
       } else {
         $(".assess").text("incorrect");
-        setTimeout(() =>{
-          clearHTML($(".assess"))
-        }, 1000)
+        setTimeout(() => {
+          clearHTML($(".assess"));
+        }, 1000);
       }
     });
   }
