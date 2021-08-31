@@ -46,10 +46,15 @@ body {
   line-height: 160px;
   margin-right: 40px;
 }
-
+.assess {
+  font-size: 60px;
+  line-height: 160px;
+  color: #ff5959;
+}
 .answers {
   font-size: 90px;
   line-height: 90px;
+  margin-bottom: 20px;
 }
 .answers div {
   width: 258.99px;

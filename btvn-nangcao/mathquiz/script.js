@@ -4,10 +4,8 @@ $(function () {
   let answer;
   let currentOperant;
   function generateNumbers() {
-    let number = Math.floor(Math.random() * 10);
-    if (number != 0) return number;
-    if (number == undefined) return (number = 2);
-    else return (number = 1);
+    let number = Math.floor(Math.random() * 100);
+    return number;
   }
   function clearHTML(container) {
     container.html("");
@@ -17,33 +15,34 @@ $(function () {
     clearHTML(quizDisplayBlock);
     firstNumber = generateNumbers();
     secondNumber = generateNumbers();
-    let number1 = $("<div></div")
-      .appendTo(quizDisplayBlock)
-      .addClass("number1")
-      .css("color", `${randomColor({ luminosity: "dark" })}`)
-      .text(`${firstNumber}`);
-    let operator = $("<div></div")
-      .appendTo(quizDisplayBlock)
-      .addClass("operator")
-      .css("color", `${randomColor({ luminosity: "dark" })}`)
-      .text(`${operators}`);
-    let number2 = $("<div></div")
-      .appendTo(quizDisplayBlock)
-      .addClass("number2")
-      .css("color", `${randomColor({ luminosity: "dark" })}`)
-      .text(`${secondNumber}`);
-    const equal = $("<div></div")
-      .appendTo(quizDisplayBlock)
-      .addClass("equal")
-      .css("color", `${randomColor({ luminosity: "dark" })}`)
-      .text(`=`);
-    let result = $("<div></div")
-      .appendTo(quizDisplayBlock)
-      .addClass("result")
-      .css("color", `${randomColor({ luminosity: "dark" })}`)
-      .text(`?`);
-
-    return firstNumber, secondNumber;
+    if (firstNumber > secondNumber && firstNumber % secondNumber == 0 && firstNumber < 20) {
+      let number1 = $("<div></div")
+        .appendTo(quizDisplayBlock)
+        .addClass("number1")
+        .css("color", `${randomColor({ luminosity: "dark" })}`)
+        .text(`${firstNumber}`);
+      let operator = $("<div></div")
+        .appendTo(quizDisplayBlock)
+        .addClass("operator")
+        .css("color", `${randomColor({ luminosity: "dark" })}`)
+        .text(`${operators}`);
+      let number2 = $("<div></div")
+        .appendTo(quizDisplayBlock)
+        .addClass("number2")
+        .css("color", `${randomColor({ luminosity: "dark" })}`)
+        .text(`${secondNumber}`);
+      const equal = $("<div></div")
+        .appendTo(quizDisplayBlock)
+        .addClass("equal")
+        .css("color", `${randomColor({ luminosity: "dark" })}`)
+        .text(`=`);
+      let result = $("<div></div")
+        .appendTo(quizDisplayBlock)
+        .addClass("result")
+        .css("color", `${randomColor({ luminosity: "dark" })}`)
+        .text(`?`);
+      return firstNumber, secondNumber;
+    } else renderQuiz(operators);
   }
   function renderResult(operand) {
     const answersDisplayBlock = $(".answers");
@@ -56,8 +55,10 @@ $(function () {
       : operand == "*"
       ? (trueResult = firstNumber * secondNumber)
       : (trueResult = parseFloat((firstNumber / secondNumber).toFixed(1)));
-    let randomResult_1 = generateNumbers();
-    let randomResult_2 = generateNumbers();
+    let randomResult_1;
+    let randomResult_2;
+    randomResult_1 = generateNumbers();
+    randomResult_2 = generateNumbers();
     const answerArray = [trueResult, randomResult_1, randomResult_2];
     const shuffledAnswerArray = answerArray.sort((a, b) => 0.5 - Math.random());
     if (
@@ -83,8 +84,10 @@ $(function () {
       answer = trueResult;
       currentOperant = operand;
       findingAnswer();
+
+      // console.log(answerArray, randomResult_1, randomResult_2);
       return answer, currentOperant;
-    } else return renderResult(operand);
+    } else renderResult(operand);
   }
   function imgTo(el) {
     $("<img>").appendTo($(el)).attr("src", "./decor/Vector 1.svg");
@@ -101,22 +104,22 @@ $(function () {
   $(".add").on("click", () => {
     imgTo(".add");
     renderQuiz("+");
-    renderResult("+")
+    renderResult("+");
   });
   $(".sub").on("click", () => {
     imgTo(".sub");
     renderQuiz("-");
-    renderResult("-")
+    renderResult("-");
   });
   $(".mul").on("click", () => {
     imgTo(".mul");
     renderQuiz("*");
-    renderResult("*")
+    renderResult("*");
   });
   $(".div").on("click", () => {
     imgTo(".div");
     renderQuiz("/");
-    renderResult("/")
+    renderResult("/");
   });
   renderQuiz("+");
   renderResult("+");
@@ -125,36 +128,51 @@ $(function () {
       ev.preventDefault();
       if (answer == parseFloat($(".answer1").text())) {
         $(".result").text(`${answer}`);
+        $(".assess").text("correct");
         setTimeout(() => {
+          clearHTML($(".assess"))
           renderQuiz(currentOperant);
           renderResult(currentOperant);
-        }, 2000);
+        }, 1000);
       } else {
-        alert("dUmb bitCh, try AGAIN !!!");
+         $(".assess").text("incorrect");
+         setTimeout(() =>{
+           clearHTML($(".assess"))
+         }, 1000)
       }
     });
     $(".answer2").on("click", (ev) => {
       ev.preventDefault();
       if (answer == parseFloat($(".answer2").text())) {
         $(".result").text(`${answer}`);
+        $(".assess").text("correct");
         setTimeout(() => {
+          clearHTML($(".assess"))
           renderQuiz(currentOperant);
           renderResult(currentOperant);
-        }, 2000);
+        }, 1000);
       } else {
-        alert("dUmb bItcH, , try AGAIN !!!");
+        $(".assess").text("incorrect");
+        setTimeout(() =>{
+          clearHTML($(".assess"))
+        }, 1000)
       }
     });
     $(".answer3").on("click", (ev) => {
       ev.preventDefault();
       if (answer == parseFloat($(".answer3").text())) {
         $(".result").text(`${answer}`);
+        $(".assess").text("correct");
         setTimeout(() => {
+          clearHTML($(".assess"))
           renderQuiz(currentOperant);
           renderResult(currentOperant);
-        }, 2000);
+        }, 1000);
       } else {
-        alert("dUmb bItcH, , try AGAIN !!!");
+        $(".assess").text("incorrect");
+        setTimeout(() =>{
+          clearHTML($(".assess"))
+        }, 1000)
       }
     });
   }
