@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/main.min.css" />
+  <link rel="stylesheet" href="../asset/style.css" />
+  <script src="../asset/script.js" defer></script>
+  <title>Berry Good</title>
+</head>
+
+<body>
+  <header>
+    <div class="nav-bar">
+      <a href="trangchu.html">Trang Chủ</a>
+      <a href="sanpham.html">Sản Phẩm</a>
+      <a href="#">Pha Chế</a>
+      <a href="#">Liên Hệ</a>
+    </div>
+    <div class="logo">
+      <p class="upper-text">JUBILIE</p>
+      <p class="lower-text">coffee roaster</p>
+    </div>
+    <aside>
+      <div class="cart-icon">
+        <i class="icon"></i>
+        <i class="dropdown-button"></i>
+      </div>
+    </aside>
+  </header>
+  <main>
+    <section class="payment">
+      <div class="container px-0">
+        <div class="row d-flex flex-column align-items-end ">
+          <div class="options-payment col-6">
+            <div class="options-payment-header d-flex justify-content-between">
+              <div class="wrap">
+                <div class="name-price">
+                  <!--   -->
+                  <p class="name condensed-bold text-capitalize">
+                    berry good
+                  </p>
+                  <span class="bold text-capitalize">từ</span>
+                  <span class="price bold text-capitalize">200.000</span>
+                  <span class="bold text-uppercase">vnd</span>
+                </div>
+                <div class="flavors">
+                  <p class="bold">Hương vị:</p>
+                  <p class="flavor-types light text-capitalize">
+                    xoài, chanh, mật ong
+                  </p>
+                </div>
+                <div class="roast-date">
+                  <span class="bold">Ngày rang:</span>
+                  <span class="date regular">16/11/2021</span>
+                </div>
+              </div>
+              <div class="best">
+                <p class="title condensed-bold text-uppercase"><u>best</u></p>
+                <div class="wrap-method">
+                  <p class="bold">Phương thức:</p>
+                  <p class="method-types light text-capitalize">
+                    Drip, French Press
+                  </p>
+                </div>
+                <div class="line"></div>
+                <div class="wrap-temp">
+                  <p class="bold">Nhiệt độ:</p>
+                  <p class="temp light text-uppercase">92C</p>
+                </div>
+              </div>
+            </div>
+            <div class="options">
+              <div class="option-weight">
+                <div class="title bold">Trọng lượng</div>
+                <div class="wrap-checkbox d-flex justify-content-center">
+                  <input type="checkbox" name="100gr" id="weight-100" />
+                  <label for="weight-100">100gr</label>
+                  <input type="checkbox" name="250gr" id="weight-250" />
+                  <label for="weight-250">250gr</label>
+                  <input type="checkbox" name="500gr" id="weight-500" />
+                  <label for="weight-500">500gr</label>
+                  <input type="checkbox" name="1kg" id="weight-1000" />
+                  <label for="weight-1000">1kg</label>
+                </div>
+              </div>
+              <div class="option-grind">
+                <div class="title bold">Cỡ xay</div>
+                <div class="wrap-checkbox d-flex justify-content-center">
+                  <input type="checkbox" name="whole-bean" id="whole-bean" />
+                  <label for="whole-bean">Nguyên hạt</label>
+                  <input type="checkbox" name="espresso" id="espresso" />
+                  <label for="espresso">Espresso</label>
+                  <input type="checkbox" name="drip" id="drip" />
+                  <label for="drip">Drip</label>
+                  <input type="checkbox" name="aeropress" id="aeropress" />
+                  <label for="aeropress">aeropress</label>
+                </div>
+                <div class="wrap-checkbox d-flex justify-content-center">
+                  <input type="checkbox" name="cold-brew" id="cold-brew" />
+                  <label for="cold-brew">Cold-brew</label>
+                  <input type="checkbox" name="steep" id="steep" />
+                  <label for="steep">Steep</label>
+                  <input type="checkbox" name="drip-bag" id="drip-bag" />
+                  <label for="drip-bag">Drip-bag</label>
+                  <input type="checkbox" name="phin" id="phin" />
+                  <label for="phin">phin</label>
+                </div>
+              </div>
+            </div>
+            <section>
+              <form action="">
+                <label for="qty">Số lượng</label>
+                <p class="qty bold">
+                  <button class="qtyminus bold" aria-hidden="true">
+                    &minus;
+                  </button>
+                  <input type="number" name="qty" id="qty" min="1" max="10" step="1" value="1" />
+                  <button class="qtyplus bold" aria-hidden="true">
+                    &plus;
+                  </button>
+                </p>
+              </form>
+            </section>
+            <section id="check-out">
+              <div class="wrap d-flex justify-content-center medium text-center">
+                <button class="check-out">
+                  <a href="#">Mua ngay</a>
+                </button>
+                <button class="add-to-cart">Thêm vào giỏ hàng</button>
+              </div>
+            </section>
+          </div>
+          <section id="story-details" class="d-flex justify-content-center">
+            <div class="story col-5">
+              <p class="bold">Chuyện về cà phê</p>
+              <p class="story-content">
+                The Ethiopia Colorized Blend was carefully roasted for you by
+                Metric Coffee Co. This Half Washed, Half Natural process
+                coffee was grown in the Guji region of Ethiopia between 1,800
+                and 2,100 meters above sea level. Fans of lighter roasted
+                coffees will delight in its playful profile that showcases
+                juicy, tropical fruit notes and confectionery sweetness.
+              </p>
+            </div>
+            <div class="details col-5">
+              <p class="bold">Chi tiết sản phẩm</p>
+              <!-- <div class="details-content"> -->
+              <div class="detail d-flex flex-wrap row-cols-2">
+                <div class="wrap-origin col">
+                  <i class="icon-detail"></i>
+                  <div class="wrap">
+                    <p class="origin">Xuất xứ</p>
+                    <p class="data-origin text-bold">ethiopia</p>
+                  </div>
+                </div>
+                <div class="wrap-region col">
+                  <i class="icon-detail"></i>
+                  <div class="wrap">
+                    <p class="region">Vùng</p>
+                    <p class="data-region text-bold">Guji</p>
+                  </div>
+                </div>
+                <div class="wrap-altitude col">
+                  <i class="icon-detail"></i>
+                  <div class="wrap">
+                    <p class="altitude">Độ cao</p>
+                    <p class="data-altitude text-bold">1800-2100</p>
+                  </div>
+                </div>
+                <div class="wrap-process col">
+                  <i class="icon-detail"></i>
+                  <div class="wrap">
+                    <p class="process">Sơ chế</p>
+                    <p class="data-process text-bold">Nửa ướt, nửa tự nhiên</p>
+                  </div>
+                </div>
+                <div class="wrap-variety col">
+                  <i class="icon-detail"></i>
+                  <div class="wrap">
+                    <p class="variety">Chủng loại</p>
+                    <p class="data-variety text-bold">ethiopia heirloom</p>
+                  </div>
+                </div>
+                <div class="wrap-producer col">
+                  <i class="icon-detail"></i>
+                  <div class="wrap">
+                    <p class="producer">Nhà sản xuất</p>
+                    <p class="data-producer text-bold">kata muduga and snap</p>
+                  </div>
+                </div>
+
+              </div>
+              <!-- </div> -->
+          </section>
+        </div>
+      </div>
+    </section>
+    <div class="abcd"></div>
+  </main>
+</body>
+
+</html>
