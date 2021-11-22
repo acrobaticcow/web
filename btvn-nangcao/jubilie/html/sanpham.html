@@ -1,199 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/main.min.css" />
-    <link rel="stylesheet" href="../asset/style.css" />
-    <script src="../asset/script.js" defer></script>
-    <title>Sản Phẩm</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="nav-bar">
-        <a href="trangchu.html">Trang Chủ</a>
-        <a href="sanpham.html">Sản Phẩm</a>
-        <a href="#">Pha Chế</a>
-        <a href="#">Liên Hệ</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/asset/main.min.css">
+  <link rel="stylesheet" href="../asset/style.css" />
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script defer src="../asset/script.js"></script>
+  <title>Sản Phẩm</title>
+</head>
+
+<body>
+  <header>
+    <div class="nav-bar">
+      <li class="content__item">
+        <a href="trangchu.html" class="link link--metis text-capitalize bold">Trang chủ</a>
+      </li>
+      <li class="content__item">
+        <a href="sanpham.html" class="link link--metis text-capitalize bold">Sản phẩm</a>
+      </li>
+      <li class="content__item">
+        <a href="#" class="link link--metis text-capitalize bold">Pha chế</a>
+      </li>
+      <li class="content__item">
+        <a href="#" class="link link--metis text-capitalize bold">Liên Hệ</a>
+      </li>
+    </div>
+    <div class="logo">
+      <p class="upper-text">JUBILIE</p>
+      <p class="lower-text">coffee roaster</p>
+    </div>
+    <aside>
+      <div class="cart-icon">
+        <i class="icon"></i>
+        <i class="dropdown-button"></i>
       </div>
-      <div class="logo">
-        <p class="upper-text">JUBILIE</p>
-        <p class="lower-text">coffee roaster</p>
-      </div>
-      <aside>
-        <div class="cart-icon">
-          <i class="icon"></i>
-          <i class="dropdown-button"></i>
-        </div>
-      </aside>
-    </header>
-    <main>
-      <div class="container-fluid pd-r-0">
-        <div class="row">
-          <div class="filter col-3 px-0">
-            <div class="title bold">
-              <h1>sản phẩm</h1>
-            </div>
-            <div class="main">
-              <div class="filter-bar">
-                <div
-                  class="
+    </aside>
+  </header>
+  <main>
+    <div class="container-fluid pd-r-0">
+      <div class="row">
+        <div class="filter col-3 px-0">
+          <div class="title bold">
+            <h1>sản phẩm</h1>
+          </div>
+          <div class="main">
+            <div class="filter-bar">
+              <div class="
                     wrapper
                     header
                     d-flex
                     justify-content-between
                     align-items-end
-                  "
-                >
-                  <p class="bold text-uppercase">Lọc</p>
-                  <u class="light">Xóa tất cả</u>
-                </div>
-                <div class="content-box d-flex">
-                  <div class="tag d-flex align-items-center">
-                    <span class="bold text-uppercase">Medium</span>
-                    <span class="icon"></span>
-                  </div>
-                  <div class="tag d-flex align-items-center">
-                    <span class="bold text-uppercase">Guatemala</span>
-                    <span class="icon"></span>
-                  </div>
+                  ">
+                <p class="bold text-uppercase">Lọc</p>
+                <u class="light btn-remove-filter">Xóa tất cả</u>
+              </div>
+              <div class="result-box d-flex">
+                <!-- <button class="btn-remove tag d-flex align-items-center">
+                  <span class="bold text-uppercase">Single Origin</span>
+                  <span class="del icon"></span>
+                </button>
+                <button class="tag d-flex align-items-center">
+                  <span class= "bold text-uppercase">Nhạt</span>
+                  <span class="del icon"></span>
+                </button> -->
+              </div>
+            </div>
+            <div class="categories">
+              <div id='roast-category' class="wrap-collapsible light">
+                <input id="collapsible" class="toggle" value='Rang' type="checkbox" category="roast" />
+                <label for="collapsible" class="lbl-toggle bold">Rang</label>
+                <div class="collapsible-content">
+                  <ul class="roast content-inner">
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" name="ci-cb" class="input-all" category="roast" value='Tất cả'
+                        id="roast-all" />
+                      <label for="roast-all">Chọn tất cả</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" class=" input-item" name="ci-cb" category="roast" value="Nhạt" id="nhat" />
+                      <label for="nhat">Nhạt</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" class="input-item" name="ci-cb" category="roast" class=" input-item"
+                        id="vua" value="Vừa" />
+                      <label for="vua">Vừa</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" class="input-item" category="roast" name="ci-cb" id="dam"
+                        class="input-item" value="Đậm" />
+                      <label for="dam">Đậm</label>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div class="categories">
-                <div class="wrap-collapsible light">
-                  <input id="collapsible" class="toggle" type="checkbox" />
-                  <label for="collapsible" class="lbl-toggle bold">Rang</label>
-                  <div class="collapsible-content">
-                    <ul class="content-inner">
-                      <li class="d-flex align-items-center">
-                        <input
-                          type="checkbox"
-                          class="tag-checkbox"
-                          name="ci-cb"
-                          id="nhat"
-                        />
-                        <label for="nhat">Nhạt</label>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="vua" />
-                        <label for="vua">Vừa</label>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="dam" />
-                        <label for="dam">Đậm</label>
-                      </li>
-                    </ul>
-                  </div>
+              <!-- <div id="type-category" class="wrap-collapsible light">
+                <input id="collapsible-type" class="toggle" value='Loại' type="checkbox" category="type" />
+                <label for="collapsible-type" class="lbl-toggle bold">Loại</label>
+                <div class="collapsible-content">
+                  <ul class="type content-inner">
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" name="ci-cb" class="input-all" category="type" value='Tất cả'
+                        id="type-all" />
+                      <label for="type-all">Chọn tất cả</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input value="Blend" type="checkbox" class="input-item" name="ci-cb" category="type" id="blend" />
+                      <label for="blend">Blend</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input value="Single Origin" type="checkbox" class="input-item" category="type" name="ci-cb"
+                        id="single" />
+                      <label for="single">Single Origin</label>
+                    </li>
+                  </ul>
                 </div>
-                <div class="wrap-collapsible light">
-                  <input id="collapsible-type" class="toggle" type="checkbox" />
-                  <label for="collapsible-type" class="lbl-toggle bold"
-                    >Loại</label
-                  >
-                  <div class="collapsible-content">
-                    <ul class="content-inner">
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="blend" />
-                        <label for="blend">Blend</label>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="single" />
-                        <label for="single">Single Origin</label>
-                      </li>
-                    </ul>
-                  </div>
+              </div> -->
+              <div class="wrap-collapsible light">
+                <input id="collapsible-acidity" class="toggle" value='Độ chua' type="checkbox" category='acidity' />
+                <label for="collapsible-acidity" class="lbl-toggle bold">Độ chua</label>
+                <div class="collapsible-content">
+                  <ul class="acidity content-inner">
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" name="ci-cb" class="input-all" category="acidity" value='Tất cả'
+                        id="acidity-all" value="Tất cả" />
+                      <label for="acidity-all">Chọn tất cả</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input value='Thấp' type="checkbox" class="input-item" name="ci-cb" id="thap"
+                        category="acidity" />
+                      <label for="thap">Thấp</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input value='Trung bình' type="checkbox" category="acidity" class="input-item" name="ci-cb"
+                        id="trung-binh" />
+                      <label for="trung-binh">Trung bình</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input value='Cao' type="checkbox" class="input-item" category="acidity" name="ci-cb" id="cao" />
+                      <label for="cao">Cao</label>
+                    </li>
+                  </ul>
                 </div>
-                <div class="wrap-collapsible light">
-                  <input
-                    id="collapsible-acidity"
-                    class="toggle"
-                    type="checkbox"
-                  />
-                  <label for="collapsible-acidity" class="lbl-toggle bold"
-                    >Độ chua</label
-                  >
-                  <div class="collapsible-content">
-                    <ul class="content-inner">
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="thap" />
-                        <label for="thap">Thấp</label>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="trung-binh" />
-                        <label for="trung-binh">Vừa</label>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="cao" />
-                        <label for="cao">Cao</label>
-                      </li>
-                    </ul>
-                  </div>
+              </div>
+              <div class="wrap-collapsible light">
+                <input id="collapsible-origin" class="toggle" value='Xuất xứ' type="checkbox" category="origin" />
+                <label for="collapsible-origin" class="lbl-toggle bold">Xuất xứ</label>
+                <div class="collapsible-content">
+                  <ul class="origin content-inner">
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" name="ci-cb" class="input-all" category="origin" value='Tất cả'
+                        id="origin-all" />
+                      <label for="origin-all">Chọn tất cả</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input category="origin" value='Châu Phi' type="checkbox" class="input-item" name="ci-cb"
+                        id="chau-phi" />
+                      <label for="chau-phi">Châu Phi</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input category="origin" value='Châu Mĩ' type="checkbox" class="input-item" name="ci-cb"
+                        id="chau-mi" />
+                      <label for="chau-mi">Châu Mĩ</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input category="origin" value='Châu Á Thái Bình Dương' type="checkbox" class="input-item"
+                        name="ci-cb" id="asia-pacific" />
+                      <label for="asia-pacific">Châu Á Thái Bình Dương</label>
+                    </li>
+                  </ul>
                 </div>
-                <div class="wrap-collapsible light">
-                  <input
-                    id="collapsible-origin"
-                    class="toggle"
-                    type="checkbox"
-                  />
-                  <label for="collapsible-origin" class="lbl-toggle bold"
-                    >Xuất xứ</label
-                  >
-                  <div class="collapsible-content">
-                    <ul class="content-inner">
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="chau-phi" />
-                        <label for="chau-phi">Châu Phi</label>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="chau-mi" />
-                        <label for="chau-mi">Châu Mĩ</label>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="asia-pacific" />
-                        <label for="asia-pacific">Châu Á Thái Bình Dương</label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="wrap-collapsible light">
-                  <input
-                    id="collapsible-process"
-                    class="toggle"
-                    type="checkbox"
-                  />
-                  <label for="collapsible-process" class="lbl-toggle bold"
-                    >Sơ chế</label
-                  >
-                  <div class="collapsible-content">
-                    <ul class="content-inner">
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="natural" />
-                        <label for="natural">Tự nhiên</label>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="washed" />
-                        <label for="washed">Ướt</label>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <input type="checkbox" name="ci-cb" id="honey" />
-                        <label for="honey">Honey</label>
-                      </li>
-                    </ul>
-                  </div>
+              </div>
+              <div class="wrap-collapsible light">
+                <input id="collapsible-process" class="toggle" value='Sơ chế' type="checkbox" category="process" />
+                <label for="collapsible-process" class="lbl-toggle bold">Sơ chế</label>
+                <div class="collapsible-content">
+                  <ul class="process content-inner">
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" name="ci-cb" class="input-all" category="process" value='Tất cả'
+                        id="process-all" value="Tất cả" />
+                      <label for="process-all">Chọn tất cả</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input category="process" value='Tự nhiên' type="checkbox" class="input-item" name="ci-cb"
+                        id="natural" />
+                      <label for="natural">Tự nhiên</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input category="process" value='Ướt' type="checkbox" class="input-item" name="ci-cb"
+                        id="washed" />
+                      <label for="washed">Ướt</label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input category="process" value='Honey' type="checkbox" class="input-item" name="ci-cb"
+                        id="honey" />
+                      <label for="honey">Honey</label>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="store d-flex col row-cols-3">
-            <div class="store-banner"></div>
+        </div>
+        <div class="store col ">
+          <div class="store-banner"></div>
+          <div class="all-product store-col row-cols-3">
             <div class="col">
-              <a href="#">
-                <div
-                  name="mango-tango"
-                  class="store-product-card new-arrival-tag"
-                >
+              <a href="chitiet.html">
+                <div name="mango-tango" class="store-product-card new-arrival-tag">
                   <div class="product-card-header">
                     <p class="name bold text-capitalize">Mango Tango</p>
                     <!-- <p class="flavors regular">Xoài, chanh, mật ong</p> -->
@@ -204,51 +225,44 @@
                     <div class="secondary-content-img-overlay"></div>
                     <div class="content-overlay"></div>
                     <div class="content-image">
-                      <img
-                        src="../asset/icons/coffee-bag-mock-up-minimal.webp"
-                        alt="rwanda coffee"
-                      />
+                      <img src="../asset/icons/coffee-bag-mock-up-minimal.webp" alt="rwanda coffee" />
                     </div>
-                    <div
-                      class="
-                        content-details
-                        fadeIn-bottom
-                        d-flex
-                        align-items-center
-                      "
-                    >
+                    <div class="
+                          content-details
+                          fadeIn-bottom
+                          d-flex
+                          align-items-center
+                        ">
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Xuất xứ</p>
-                          <p class="origin regular">Ethiopia</p>
+                          <p data-origin="" class="origin regular">Ethiopia</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Độ chua</p>
-                          <p class="acidity regular">Cao</p>
+                          <p data-acidity="" class="acidity regular">Cao</p>
                         </div>
                       </div>
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Sơ chế</p>
-                          <p class="process regular">Ướt</p>
+                          <p data-process ="" class="process regular">Ướt</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Rang</p>
-                          <p class="roast regular">Nhạt</p>
+                          <p data-roast="" class="roast regular" >Nhạt</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <p class="regular">From</p>
-                  <div
-                    class="
-                      wrap-price-btn
-                      d-flex
-                      align-items-center
-                      justify-content-between
-                      bold
-                    "
-                  >
+                  <div class="
+                        wrap-price-btn
+                        d-flex
+                        align-items-center
+                        justify-content-between
+                        bold
+                      ">
                     <div class="wrapper">
                       <span class="store-price bold">200.000</span>
                       <span class="currency bold text-uppercase">vnd</span>
@@ -260,63 +274,55 @@
               </a>
             </div>
             <div class="col">
-              <a href="#">
-                <div name="mango-tango" class="store-product-card">
+              <a href="chitiet.html">
+                <div name="berry good" class="store-product-card">
                   <div class="product-card-header">
-                    <p class="name bold">Mango Tango</p>
-                    <!-- <p class="flavors regular">Xoài, chanh, mật ong</p> -->
-                     <span class="notes italic text-capitalize">Notes:</span>
-                    <span class="notes italic text-capitalize">xoài, chanh, mật 
+                    <p class="name bold">Berry Good</p>
+                    <span class="notes italic text-capitalize">Notes:</span>
+                    <span class="notes italic text-capitalize">Dâu, Hoa Hồng, đường bánh</span>
                   </div>
                   <div class="content wrap-img">
                     <div class="secondary-content-img-overlay"></div>
                     <div class="content-overlay"></div>
                     <div class="content-image">
-                      <img
-                        src="../asset/icons/coffee-bag-mock-up-minimal.webp"
-                        alt="rwanda coffee"
-                      />
+                      <img src="../asset/icons/coffee-bag-mock-up-minimal.webp" alt="rwanda coffee" />
                     </div>
-                    <div
-                      class="
-                        content-details
-                        fadeIn-bottom
-                        d-flex
-                        align-items-center
-                      "
-                    >
+                    <div class="
+                          content-details
+                          fadeIn-bottom
+                          d-flex
+                          align-items-center
+                        ">
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Xuất xứ</p>
-                          <p class="origin regular">Ethiopia</p>
+                          <p data-origin="" class="origin regular">Châu Mĩ</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Độ chua</p>
-                          <p class="acidity regular">Cao</p>
+                          <p data-acidity="" class="acidity regular">Cao</p>
                         </div>
                       </div>
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Sơ chế</p>
-                          <p class="process regular">Ướt</p>
+                          <p data-process ="" class="process regular">Ướt</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Rang</p>
-                          <p class="roast regular">Nhạt</p>
+                          <p data-roast="" class="roast regular" >Nhạt</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <p class="regular">From</p>
-                  <div
-                    class="
-                      wrap-price-btn
-                      d-flex
-                      align-items-center
-                      justify-content-between
-                      bold
-                    "
-                  >
+                  <div class="
+                        wrap-price-btn
+                        d-flex
+                        align-items-center
+                        justify-content-between
+                        bold
+                      ">
                     <div class="wrapper">
                       <span class="store-price bold">200.000</span>
                       <span class="currency bold text-uppercase">vnd</span>
@@ -328,63 +334,56 @@
               </a>
             </div>
             <div class="col">
-              <a href="#">
+              <a href="chitiet.html">
                 <div name="mango-tango" class="store-product-card">
                   <div class="product-card-header">
                     <p class="name bold">Mango Tango</p>
                     <!-- <p class="flavors regular">Xoài, chanh, mật ong</p> -->
-                     <span class="notes italic text-capitalize">Notes:</span>
-                    <span class="notes italic text-capitalize">xoài, chanh, mật 
+                    <span class="notes italic text-capitalize">Notes:</span>
+                    <span class="notes italic text-capitalize">xoài, chanh, mật
                   </div>
                   <div class="content wrap-img">
                     <div class="secondary-content-img-overlay"></div>
                     <div class="content-overlay"></div>
                     <div class="content-image">
-                      <img
-                        src="../asset/icons/coffee-bag-mock-up-minimal.webp"
-                        alt="rwanda coffee"
-                      />
+                      <img src="../asset/icons/coffee-bag-mock-up-minimal.webp" alt="rwanda coffee" />
                     </div>
-                    <div
-                      class="
-                        content-details
-                        fadeIn-bottom
-                        d-flex
-                        align-items-center
-                      "
-                    >
+                    <div class="
+                          content-details
+                          fadeIn-bottom
+                          d-flex
+                          align-items-center
+                        ">
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Xuất xứ</p>
-                          <p class="origin regular">Ethiopia</p>
+                          <p data-origin="" class="origin regular">Ethiopia</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Độ chua</p>
-                          <p class="acidity regular">Cao</p>
+                          <p data-acidity="" class="acidity regular">Cao</p>
                         </div>
                       </div>
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Sơ chế</p>
-                          <p class="process regular">Ướt</p>
+                          <p data-process ="" class="process regular">Ướt</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Rang</p>
-                          <p class="roast regular">Nhạt</p>
+                          <p data-roast="" class="roast regular" >Nhạt</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <p class="regular">From</p>
-                  <div
-                    class="
-                      wrap-price-btn
-                      d-flex
-                      align-items-center
-                      justify-content-between
-                      bold
-                    "
-                  >
+                  <div class="
+                        wrap-price-btn
+                        d-flex
+                        align-items-center
+                        justify-content-between
+                        bold
+                      ">
                     <div class="wrapper">
                       <span class="store-price bold">200.000</span>
                       <span class="currency bold text-uppercase">vnd</span>
@@ -396,63 +395,56 @@
               </a>
             </div>
             <div class="col">
-              <a href="#">
+              <a href="chitiet.html">
                 <div name="mango-tango" class="store-product-card">
                   <div class="product-card-header">
                     <p class="name bold">Mango Tango</p>
                     <!-- <p class="flavors regular">Xoài, chanh, mật ong</p> -->
-                     <span class="notes italic text-capitalize">Notes:</span>
-                    <span class="notes italic text-capitalize">xoài, chanh, mật 
+                    <span class="notes italic text-capitalize">Notes:</span>
+                    <span class="notes italic text-capitalize">xoài, chanh, mật
                   </div>
                   <div class="content wrap-img">
                     <div class="secondary-content-img-overlay"></div>
                     <div class="content-overlay"></div>
                     <div class="content-image">
-                      <img
-                        src="../asset/icons/coffee-bag-mock-up-minimal.webp"
-                        alt="rwanda coffee"
-                      />
+                      <img src="../asset/icons/coffee-bag-mock-up-minimal.webp" alt="rwanda coffee" />
                     </div>
-                    <div
-                      class="
-                        content-details
-                        fadeIn-bottom
-                        d-flex
-                        align-items-center
-                      "
-                    >
+                    <div class="
+                          content-details
+                          fadeIn-bottom
+                          d-flex
+                          align-items-center
+                        ">
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Xuất xứ</p>
-                          <p class="origin regular">Ethiopia</p>
+                          <p data-origin="" class="origin regular">Ethiopia</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Độ chua</p>
-                          <p class="acidity regular">Cao</p>
+                          <p data-acidity="" class="acidity regular">Cao</p>
                         </div>
                       </div>
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Sơ chế</p>
-                          <p class="process regular">Ướt</p>
+                          <p data-process ="" class="process regular">Ướt</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Rang</p>
-                          <p class="roast regular">Nhạt</p>
+                          <p data-roast="" class="roast regular" >Nhạt</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <p class="regular">From</p>
-                  <div
-                    class="
-                      wrap-price-btn
-                      d-flex
-                      align-items-center
-                      justify-content-between
-                      bold
-                    "
-                  >
+                  <div class="
+                        wrap-price-btn
+                        d-flex
+                        align-items-center
+                        justify-content-between
+                        bold
+                      ">
                     <div class="wrapper">
                       <span class="store-price bold">200.000</span>
                       <span class="currency bold text-uppercase">vnd</span>
@@ -464,63 +456,56 @@
               </a>
             </div>
             <div class="col">
-              <a href="#">
+              <a href="chitiet.html">
                 <div name="mango-tango" class="store-product-card">
                   <div class="product-card-header">
                     <p class="name bold">Mango Tango</p>
                     <!-- <p class="flavors regular">Xoài, chanh, mật ong</p> -->
-                     <span class="notes italic text-capitalize">Notes:</span>
-                    <span class="notes italic text-capitalize">xoài, chanh, mật 
+                    <span class="notes italic text-capitalize">Notes:</span>
+                    <span class="notes italic text-capitalize">xoài, chanh, mật
                   </div>
                   <div class="content wrap-img">
                     <div class="secondary-content-img-overlay"></div>
                     <div class="content-overlay"></div>
                     <div class="content-image">
-                      <img
-                        src="../asset/icons/coffee-bag-mock-up-minimal.webp"
-                        alt="rwanda coffee"
-                      />
+                      <img src="../asset/icons/coffee-bag-mock-up-minimal.webp" alt="rwanda coffee" />
                     </div>
-                    <div
-                      class="
-                        content-details
-                        fadeIn-bottom
-                        d-flex
-                        align-items-center
-                      "
-                    >
+                    <div class="
+                          content-details
+                          fadeIn-bottom
+                          d-flex
+                          align-items-center
+                        ">
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Xuất xứ</p>
-                          <p class="origin regular">Ethiopia</p>
+                          <p data-origin="" class="origin regular">Ethiopia</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Độ chua</p>
-                          <p class="acidity regular">Cao</p>
+                          <p data-acidity="" class="acidity regular">Cao</p>
                         </div>
                       </div>
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Sơ chế</p>
-                          <p class="process regular">Ướt</p>
+                          <p data-process ="" class="process regular">Ướt</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Rang</p>
-                          <p class="roast regular">Nhạt</p>
+                          <p data-roast="" class="roast regular" >Nhạt</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <p class="regular">From</p>
-                  <div
-                    class="
-                      wrap-price-btn
-                      d-flex
-                      align-items-center
-                      justify-content-between
-                      bold
-                    "
-                  >
+                  <div class="
+                        wrap-price-btn
+                        d-flex
+                        align-items-center
+                        justify-content-between
+                        bold
+                      ">
                     <div class="wrapper">
                       <span class="store-price bold">200.000</span>
                       <span class="currency bold text-uppercase">vnd</span>
@@ -532,63 +517,56 @@
               </a>
             </div>
             <div class="col">
-              <a href="#">
+              <a href="chitiet.html">
                 <div name="mango-tango" class="store-product-card">
                   <div class="product-card-header">
                     <p class="name bold">Mango Tango</p>
                     <!-- <p class="flavors regular">Xoài, chanh, mật ong</p> -->
-                     <span class="notes italic text-capitalize">Notes:</span>
-                    <span class="notes italic text-capitalize">xoài, chanh, mật 
+                    <span class="notes italic text-capitalize">Notes:</span>
+                    <span class="notes italic text-capitalize">xoài, chanh, mật
                   </div>
                   <div class="content wrap-img">
                     <div class="secondary-content-img-overlay"></div>
                     <div class="content-overlay"></div>
                     <div class="content-image">
-                      <img
-                        src="../asset/icons/coffee-bag-mock-up-minimal.webp"
-                        alt="rwanda coffee"
-                      />
+                      <img src="../asset/icons/coffee-bag-mock-up-minimal.webp" alt="rwanda coffee" />
                     </div>
-                    <div
-                      class="
-                        content-details
-                        fadeIn-bottom
-                        d-flex
-                        align-items-center
-                      "
-                    >
+                    <div class="
+                          content-details
+                          fadeIn-bottom
+                          d-flex
+                          align-items-center
+                        ">
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Xuất xứ</p>
-                          <p class="origin regular">Ethiopia</p>
+                          <p data-origin="" class="origin regular">Ethiopia</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Độ chua</p>
-                          <p class="acidity regular">Cao</p>
+                          <p data-acidity="" class="acidity regular">Cao</p>
                         </div>
                       </div>
                       <div class="content-details-collumn">
                         <div class="detail">
                           <p class="bold">Sơ chế</p>
-                          <p class="process regular">Ướt</p>
+                          <p data-process ="" class="process regular">Ướt</p>
                         </div>
                         <div class="detail">
                           <p class="bold">Rang</p>
-                          <p class="roast regular">Nhạt</p>
+                          <p data-roast="" class="roast regular" >Nhạt</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <p class="regular">From</p>
-                  <div
-                    class="
-                      wrap-price-btn
-                      d-flex
-                      align-items-center
-                      justify-content-between
-                      bold
-                    "
-                  >
+                  <div class="
+                        wrap-price-btn
+                        d-flex
+                        align-items-center
+                        justify-content-between
+                        bold
+                      ">
                     <div class="wrapper">
                       <span class="store-price bold">200.000</span>
                       <span class="currency bold text-uppercase">vnd</span>
@@ -600,8 +578,11 @@
               </a>
             </div>
           </div>
+          <div class="filtered-product store-col row-cols-3"></div>
         </div>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>
