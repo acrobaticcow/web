@@ -1,3 +1,4 @@
+
 $(function () {
   // set Height cho overflow absoluted content
   function setHeight() {
@@ -9,7 +10,12 @@ $(function () {
     $(".main-payment").css("height", y);
   }
   setHeight();
+  window.onresize = setHeight;
 });
+
+// import use from "../script.js";
+
+// console.log(use);
 
 // Nút tăng giảm âm lượng
 var input = document.querySelector("#qty");

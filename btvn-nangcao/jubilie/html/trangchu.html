@@ -5,36 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../asset/style.css" />
+    <script defer src="../asset/script/side-cart.js"></script>
     <title>Jubilie</title>
   </head>
   <body>
-    <header>
-      <div class="nav-bar">
-        <li class="content__item">
-          <a href="trangchu.html" class="link link--metis text-capitalize bold">Trang chủ</a>
-        </li>
-        <li class="content__item">
-          <a href="sanpham.html" class="link link--metis text-capitalize bold">Sản phẩm</a>
-        </li>
-        <li class="content__item">
-          <a href="#" class="link link--metis text-capitalize bold">Pha chế</a>
-        </li>
-        <li class="content__item">
-          <a href="#" class="link link--metis text-capitalize bold">Liên Hệ</a>
-        </li>
-      </div>
-      <div class="logo">
-        <p class="upper-text">JUBILIE</p>
-        <p class="lower-text">coffee roaster</p>
-      </div>
-      <aside>
-        <div class="cart-icon">
-          <i class="icon"></i>
-          <i class="dropdown-button"></i>
+    <header class="container-fluid d-flex flex-column justify-content-center">
+      <div class="row">
+        <div class="nav-bar col-md-4">
+          <li class="content__item">
+            <a
+              href="trangchu.html"
+              class="active link link--metis text-capitalize bold"
+              >Trang chủ</a
+            >
+          </li>
+          <li class="content__item">
+            <a href="sanpham.html" class="link link--metis text-capitalize bold"
+              >Sản phẩm</a
+            >
+          </li>
+          <li class="content__item">
+            <a href="congthuc.html" class="link link--metis text-capitalize bold"
+              >Pha chế</a
+            >
+          </li>
+          <li class="content__item">
+            <a href="#" class="link link--metis text-capitalize bold"
+              >Liên Hệ</a
+            >
+          </li>
         </div>
-      </aside>
+        <div class="logo col-md-4">
+          <p class="upper-text">JUBILIE</p>
+          <p class="lower-text">coffee roaster</p>
+        </div>
+        <aside class="col-md-4">
+          <div class="cart-icon">
+            <i class="icon"></i>
+            <i class="dropdown-button"></i>
+          </div>
+        </aside>
+      </div>
     </header>
     <div class="banner">
       <div class="wraper">
@@ -68,7 +86,7 @@
                   <span class="follows bold">VND</span>
                 </div>
                 <div class="more">
-                  <a href="#" class="hbtn-na hb-fill-right-na hpill-na medium"
+                  <a href="chitiet.html" class="hbtn-na hb-fill-right-na hpill-na medium"
                     >Thông tin</a
                   >
                 </div>
@@ -91,7 +109,7 @@
                   <span class="follows bold">VND</span>
                 </div>
                 <div class="more">
-                  <a href="#" class="hbtn-na hb-fill-right-na hpill-na medium"
+                  <a href="chitiet.html" class="hbtn-na hb-fill-right-na hpill-na medium"
                     >Thông tin</a
                   >
                 </div>
@@ -107,7 +125,6 @@
             <a href="sanpham.html" class="link bold">#MUA NGAY</a>
           </div>
         </div>
-      
       </div>
     </div>
     <div class="how-it-work">
@@ -141,13 +158,16 @@
     </div>
     <div class="guide">
       <div class="guide-side">
-        <p class="side-tittle bold">KHÁM PHÁ CÁC CÔNG THỨC CỦA -</p>
+        <p class="side-tittle bold">KHÁM PHÁ CÁC CÔNG THỨC CỦA</p>
         <p class="side-tittle chillax">JUBILIE</p>
         <div class="side-button bold">
-          <a class="hbtn hb-border-left-br4" href="#">Bắt đầu thôi!</a>
+          <a class="hbtn hb-border-left-br4" href="congthuc.html">Bắt đầu thôi!</a>
         </div>
       </div>
-      <img src="../asset/icons/vertical-equipment-minimal.webp" alt="Ảnh dụng cụ" />
+      <img
+        src="../asset/icons/vertical-equipment-minimal.webp"
+        alt="Ảnh dụng cụ"
+      />
       <div class="guide-para">
         <div class="guide-tittle bold">Pha theo cách của bạn</div>
         <div class="guide-body regular">
@@ -158,75 +178,14 @@
         </div>
       </div>
     </div>
-    <!-- <div class="row mini-checkout">
-      <div class="col-3 aside-wrapper">
-        <div class="aside-title">
-          <p class="bold">Giỏ hàng</p>
-          <i></i>
-        </div>
-        <div class="slider">
-          <div class="slider-text">
-            <div class="wrapper d-flex justify-content-evenly align-items-center">
-              <i></i>
-              <div class="value">
-                <span class="price medium">100.000</span>
-                <span class="text medium">nữa để miễn phí vận chuyển!</span>
-              </div>
-            </div>
-            <div class="wrapper d-flex align-items-center">
-              <span class="number medium">0</span>
-              <div class="progress">
-                <div
-                  class="progress-bar"
-                  role="progressbar"
-                  style="width: 66.68%"
-                  aria-valuenow="66.68"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
-              <span class="number medium">300</span>
-            </div>
-          </div>
-        </div>
-        <div class="cart-product-container">
-          <div class="product-card d-flex">
-            <div class="img-wrapper">
-              <img src="../asset/icons/mango-minimal.webp" alt="mangotango" />
-            </div>
-            <div class="description">
-              <div class="dscr-title bold">Mango Tango</div>
-              <div class="size">
-                <span class="bold">Size:</span>
-                <span class="value regular">250</span
-                ><span class="measurement regular text-uppercase">gr</span>
-              </div>
-              <div class="grind">
-                <span class="bold">Grind:</span>
-                <span class="measurement regular">Nguyên hạt</span>
-              </div>
-              <i></i>
-            </div>
-          </div>
-          <div class="product-value">
-            <div class="price">
-              <p class="price-title bold text-uppercase">Giá</p>
-              <span class="price-value condensed-bold">200.000</span>
-              <span class="price-currency condensed-bold">VND</span>
-            </div>
-            <div class="qty">
-              <p class="qty title bold text-uppercase">Số lượng</p>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="about-us">
       <p class="tittle bold">Liên hệ</p>
       <div class="container-fluid d-flex">
         <div class="about-us-gallery d-flex">
-          <img src="../asset/icons/coffee-fruit-minimal.webp" alt="Trái cà phê" />
+          <img
+            src="../asset/icons/coffee-fruit-minimal.webp"
+            alt="Trái cà phê"
+          />
           <div class="img-group d-flex">
             <img src="../asset/icons/coffee-roaster.webp" alt="Thợ rang" />
             <img
@@ -254,5 +213,132 @@
         </div>
       </div>
     </div>
+    <div class="aside-wrapper">
+      <div class="aside-title">
+        <p class="bold">Giỏ hàng</p>
+        <i></i>
+      </div>
+      <div class="slider">
+        <div class="slider-text">
+          <div class="wrapper d-flex justify-content-evenly align-items-center">
+            <i></i>
+            <div class="value">
+              <span class="price medium">100.000</span>
+              <span class="text medium">nữa để miễn phí vận chuyển!</span>
+            </div>
+          </div>
+          <div class="wrapper d-flex align-items-center">
+            <span class="number medium">0</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 66.68%"
+                aria-valuenow="66.68"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+            <span class="number medium">300</span>
+          </div>
+        </div>
+      </div>
+      <div class="cart-product-container">
+        <div class="product-card d-flex">
+          <div class="img-wrapper">
+            <img src="../asset/icons/mango-minimal.webp" alt="mangotango" />
+          </div>
+          <div class="description">
+            <div class="wrapper">
+              <div class="dscr-title bold">Mango Tango</div>
+              <div class="size">
+                <span class="bold">Size:</span>
+                <span class="value regular">250</span
+                ><span class="measurement regular text-uppercase">gr</span>
+              </div>
+              <div class="grind">
+                <span class="bold">Grind:</span>
+                <span class="measurement regular">Nguyên hạt</span>
+              </div>
+            </div>
+            <i></i>
+          </div>
+        </div>
+        <div class="product-value">
+          <div class="price">
+            <p class="price-title bold text-uppercase">Giá</p>
+            <span class="price-value condensed-bold">200.000</span>
+            <span class="price-currency condensed-bold">VND</span>
+          </div>
+          <form action="">
+            <label class="bold text-uppercase" for="qty">Số lượng</label>
+            <p class="qty bold">
+              <button class="qtyminus bold">&minus;</button>
+              <input
+                type="number"
+                name="qty"
+                id="qty"
+                min="1"
+                max="10"
+                step="1"
+                value="1"
+              />
+              <button class="qtyplus bold">&plus;</button>
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="recommendations-aside-mainpage">
+        <p class="title bold">Có thể bạn sẽ thích</p>
+        <div class="wrapper-recommendations d-flex">
+          <div class="recommendation">
+            <div class="img-wrapper">
+              <img
+                src="../asset/icons/coffee-bag-mock-up-minimal.webp"
+                alt="ChoColit"
+              />
+            </div>
+            <div class="content-wrapper">
+              <div class="content">
+                <p class="notes-content regular">Chocola, Bánh quy</p>
+                <p class="name-content">ChocoLit</p>
+                <div class="wrapper">
+                  <span class="price">180,000</span>
+                  <span>VND</span>
+                </div>
+              </div>
+              <i class="add"></i>
+            </div>
+          </div>
+          <div class="recommendation">
+            <div class="img-wrapper">
+              <img src="../asset/icons/lime-minimal.webp" alt="ChoColit" />
+            </div>
+            <div class="content-wrapper">
+              <div class="content">
+                <p class="notes-content regular">Eerl Grey, Chanh</p>
+                <p class="name-content">Ethiopia G1</p>
+                <div class="wrapper">
+                  <span class="price">230,000</span>
+                  <span>VND</span>
+                </div>
+              </div>
+              <i class="add"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-aside">
+        <div class="price">
+          <p class="subtotal condensed-bold text-uppercase">tổng phụ</p>
+          <div class="value">
+            <span>200,000</span>
+            <span>VND</span>
+          </div>
+        </div>
+        <a href="#" class="wrapper bold text-capitalize"> thanh toán </a>
+      </div>
+    </div>
+    <div class="overcast"></div>
   </body>
 </html>

@@ -11,6 +11,36 @@ let filter = {
   process: [],
 };
 
+let myProduct = {
+  asefaDukamo: new Product(
+    "Asefa Dukamo",
+    "Châu Phi",
+    "Cao",
+    "Honey",
+    "Nhạt",
+    "300,000",
+    [" Dưa Gang", " Hoa Đào", "Quả Hạch"]
+  ),
+  aynalemKupo: new Product(
+    "Aynalem Kupo",
+    "Châu Phi",
+    "Cao",
+    "Ướt",
+    "Vừa",
+    "250,000",
+    [" Xuân Đào", " Bergarmot", " Black Tea"]
+  ),
+  aynalemKospo: new Product(
+    "Aynalem Kupo",
+    "Châu Mĩ",
+    "Thấp",
+    "Tự nhiên",
+    "Đậm",
+    "250,000",
+    [" Xuân Đào", " Bergarmot", " Black Tea"]
+  ),
+};
+
 function renderFilter(filterObj) {
   resultEl.innerHTML = "";
 
@@ -114,24 +144,13 @@ window.onload = renderFilter(filter);
 
 (function onDOmChanged() {
   let observer = new MutationObserver(function (mutations) {
+    exportProductObj();
     renderTarget();
   });
   let config = { attributes: true, childList: true, characterData: true };
   let target = document.querySelector(".result-box");
   observer.observe(target, config);
 })();
-
-function Product(name, origin, acidity, process, roast, price, notes) {
-  this.name = name;
-  this.category = {
-    origin: origin,
-    acidity: acidity,
-    process: process,
-    roast: roast,
-  };
-  this.price = price;
-  this.notes = notes;
-}
 
 let mangoTango = new Product(
   "Chuối",
@@ -143,26 +162,23 @@ let mangoTango = new Product(
   [" Xoài", " Chanh", " Mật Ong"]
 );
 
-let myProduct = {
-  asefaDukamo: new Product(
-    "Asefa Dukamo",
-    "Châu Phi",
-    "Cao",
-    "Honey",
-    "Nhạt",
-    "300,000",
-    [" Dưa Gang", " Hoa Đào", "Quả Hạch"]
-  ),
-  aynalemKupo: new Product(
-    "Aynalem Kupo",
-    "Châu Phi",
-    "Cao",
-    "Ướt",
-    "Nhạt",
-    "250,000",
-    [" Xuân Đào", " Bergarmot", " Black Tea"]
-  ),
-};
+
+// myProduct = {
+//   asefaDukamo,aynalemKupo, blah, blaeh, ah
+// }
+
+function exportProductObj() {
+  let productCard = document.querySelectorAll(".store.col .col");
+  productCard.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      for (let product in myProduct) {
+        if (card.querySelector("[data-name]").dataset.name == myProduct[product].name) {
+          console.log('asd')
+        }
+      }
+    });
+  });
+}
 
 function renderTarget() {
   let store = document.querySelectorAll(".all-product div.col");
@@ -184,14 +200,21 @@ function renderTarget() {
     let value = Object.values(myProduct[product]);
     // value[1] là category
     let result;
-    requireTarget.some((target) => {
+    requireTarget.every((target) => {
       return (result = Object.values(value[1]).some(
         (k) => k.toUpperCase() === target.toUpperCase()
       ));
     });
     if (result == true) {
+      console.log(
+        filteredProductsName.some((el) => {
+          console.log(el);
+          el.toUpperCase() == `${value[0].toUpperCase()}`;
+        })
+      );
+      // if (filteredProductsName.every((el) => el.toUpperCase() == `${value[0].toUpperCase()}`)) return;
       renderProductCard(myProduct[product]);
-      document.querySelectorAll(".filtered-product .col .name").forEach((el) => filteredProductsName.push(el.dataset.name))
+      // document.querySelectorAll(".filtered-product .col .name").forEach((el) => filteredProductsName.push(el.dataset.name))
       // if (
       //   filteredProductsName.some(
       //     (k) => k.toUpperCase() == value[0].toUpperCase()
@@ -201,14 +224,17 @@ function renderTarget() {
       // } else {
       //   console.log("false");
       // }
-    } else {
-      while (filteredProducts.lastElementChild) {
-        filteredProducts.removeChild(filteredProducts.lastElementChild);
-      }
     }
+    // else {
+    //   while (filteredProducts.lastElementChild) {
+    //     filteredProducts.removeChild(filteredProducts.lastElementChild);
+    //   }
+    // }
   }
-  console.log(filteredProductsName)
-  console.log(countDuplicate(filteredProductsName))
+  document.querySelectorAll(".filtered-product .col .name").forEach((el) => {
+    // if (!filteredProductsName.some((k) => k == el.dataset.name))
+    filteredProductsName.push(el.dataset.name);
+  });
 }
 
 function countDuplicate(a) {
@@ -301,4 +327,16 @@ function renderProductCard(id) {
   `
   );
 }
-// renderProductCard(myProduct.aynalemKupo);
+ export default function Product(name, origin, acidity, process, roast, price, notes) {
+  this.name = name;
+  this.category = {
+    origin: origin,
+    acidity: acidity,
+    process: process,
+    roast: roast,
+  };
+  this.price = price;
+  this.notes = notes;
+}
+renderProductCard(myProduct.aynalemKupo);
+
