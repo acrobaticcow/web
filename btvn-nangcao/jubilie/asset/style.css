@@ -379,6 +379,13 @@ aside {
   display: flex;
   column-gap: 20px;
 }
+.cards-new-arrival > * {
+  width: calc(100% / 2 - 20px);
+  
+}
+.cards-new-arrival .store-product-card {
+  margin-bottom: 0;
+}
 .cards {
   /* width: 340px; */
   background-color: var(--cultured);
@@ -1766,5 +1773,7 @@ line-height: 13px;
   justify-content: center;
   align-items: center;
 }
-
+.cards-new-arrival.store {
+  padding: 0;
+}
 

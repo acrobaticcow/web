@@ -4,6 +4,8 @@ const btnRemoveFilter = document.querySelector(".btn-remove-filter");
 const inputsAll = document.querySelectorAll(".input-all");
 const inputItemsAll = document.querySelectorAll(".input-item");
 
+console.log(btnRemoveFilter)
+
 let filter = {
   roast: [],
   acidity: [],
@@ -44,7 +46,7 @@ let myProduct = {
 function renderFilter(filterObj) {
   resultEl.innerHTML = "";
 
-  displayBtnRemoveFilter(filterObj);
+  // displayBtnRemoveFilter(filterObj);
 
   for (const key in filterObj) {
     const inputAll = document.querySelector(
@@ -144,7 +146,6 @@ window.onload = renderFilter(filter);
 
 (function onDOmChanged() {
   let observer = new MutationObserver(function (mutations) {
-    exportProductObj();
     renderTarget();
   });
   let config = { attributes: true, childList: true, characterData: true };
@@ -167,18 +168,18 @@ let mangoTango = new Product(
 //   asefaDukamo,aynalemKupo, blah, blaeh, ah
 // }
 
-function exportProductObj() {
-  let productCard = document.querySelectorAll(".store.col .col");
-  productCard.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      for (let product in myProduct) {
-        if (card.querySelector("[data-name]").dataset.name == myProduct[product].name) {
-          console.log('asd')
-        }
-      }
-    });
-  });
-}
+// function exportProductObj() {
+//   let productCard = document.querySelectorAll(".store.col .col");
+//   productCard.forEach((card) => {
+//     card.addEventListener("mouseenter", () => {
+//       for (let product in myProduct) {
+//         if (card.querySelector("[data-name]").dataset.name == myProduct[product].name) {
+//           console.log('asd')
+//         }
+//       }
+//     });
+//   });
+// }
 
 function renderTarget() {
   let store = document.querySelectorAll(".all-product div.col");
@@ -327,7 +328,7 @@ function renderProductCard(id) {
   `
   );
 }
- export default function Product(name, origin, acidity, process, roast, price, notes) {
+ function Product(name, origin, acidity, process, roast, price, notes) {
   this.name = name;
   this.category = {
     origin: origin,

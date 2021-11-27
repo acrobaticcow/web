@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../asset/style.css" />
+    <script defer src="../asset/script/side-cart.js"></script>
     <title>Công thức</title>
   </head>
   <body>
@@ -199,5 +200,50 @@
         </div>
       </div>
     </section>
+    <div class="cart-product-container">
+      <div class="product-card d-flex">
+        <div class="img-wrapper">
+          <img src="../asset/icons/mango-minimal.webp" alt="mangotango" />
+        </div>
+        <div class="description">
+          <div class="wrapper">
+            <div class="dscr-title bold">Mango Tango</div>
+            <div class="size">
+              <span class="bold">Size:</span>
+              <span class="value regular">250</span
+              ><span class="measurement regular text-uppercase">gr</span>
+            </div>
+            <div class="grind">
+              <span class="bold">Grind:</span>
+              <span class="measurement regular">Nguyên hạt</span>
+            </div>
+          </div>
+          <i></i>
+        </div>
+      </div>
+      <div class="product-value">
+        <div class="price">
+          <p class="price-title bold text-uppercase">Giá</p>
+          <span class="price-value condensed-bold">200.000</span>
+          <span class="price-currency condensed-bold">VND</span>
+        </div>
+        <form action="">
+          <label class="bold text-uppercase" for="qty">Số lượng</label>
+          <p class="qty bold">
+            <button class="qtyminus bold">&minus;</button>
+            <input
+              type="number"
+              name="qty"
+              id="qty"
+              min="1"
+              max="10"
+              step="1"
+              value="1"
+            />
+            <button class="qtyplus bold">&plus;</button>
+          </p>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
