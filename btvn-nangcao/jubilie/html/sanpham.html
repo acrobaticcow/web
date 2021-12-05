@@ -12,6 +12,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <script defer src="../asset/script/checkout.js"></script>
   <script defer src="../asset/script/side-cart.js"></script>
   <script defer src="../asset/script.js"></script>
   <title>Sản Phẩm</title>
@@ -582,6 +583,184 @@
           <div class="filtered-product store-col row-cols-3"></div>
         </div>
       </div>
+    </div>
+    <div class="aside-wrapper">
+      <div class="aside-title">
+        <p class="bold">Giỏ hàng</p>
+        <i></i>
+      </div>
+      <div class="slider">
+        <div class="slider-text">
+          <div class="wrapper d-flex justify-content-evenly align-items-center">
+            <i></i>
+            <div class="value">
+              <span class="price medium">100.000</span>
+              <span class="text medium">nữa để miễn phí vận chuyển!</span>
+            </div>
+          </div>
+          <div class="wrapper d-flex align-items-center">
+            <span class="number medium">0</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 30%"
+                aria-valuenow="100"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+            <span class="number medium">500</span>
+          </div>
+        </div>
+      </div>
+      <div class="cart-product-container">
+        <div class="product-card d-flex">
+          <div class="img-wrapper">
+            <img src="../asset/icons/mango-minimal.webp" alt="mangotango" />
+          </div>
+          <div class="description">
+            <div class="wrapper">
+              <div class="dscr-title bold">Mango Tango</div>
+              <div class="size">
+                <span class="bold">Size:</span>
+                <span class="value regular">250</span
+                ><span class="measurement regular text-uppercase">gr</span>
+              </div>
+              <div class="grind">
+                <span class="bold">Grind:</span>
+                <span class="measurement regular">Nguyên hạt</span>
+              </div>
+            </div>
+            <i></i>
+          </div>
+        </div>
+        <div class="product-value">
+          <div class="price">
+            <p class="price-title bold text-uppercase">Giá</p>
+            <span class="price-value condensed-bold" data-price = "200.000">200.000</span>
+            <span class="price-currency condensed-bold">VND</span>
+          </div>
+          <form action="">
+            <label class="bold text-uppercase" for="qty">Số lượng</label>
+            <p class="qty bold">
+              <button class="qtyminus bold">&minus;</button>
+              <input
+                type="number"
+                name="qty"
+                id="qty"
+                min="1"
+                max="10"
+                step="1"
+                value="1"
+              />
+              <button class="qtyplus bold">&plus;</button>
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="recommendations-aside-mainpage">
+        <p class="title bold">Có thể bạn sẽ thích</p>
+        <div class="wrapper-recommendations d-flex">
+          <div class="recommendation">
+            <div class="img-wrapper">
+              <img
+                src="../asset/icons/coffee-bag-mock-up-minimal.webp"
+                alt="ChoColit"
+              />
+            </div>
+            <div class="content-wrapper">
+              <div class="content">
+                <p class="notes-content regular">Chocola, Bánh quy</p>
+                <p class="name-content">ChocoLit</p>
+                <div class="wrapper">
+                  <span class="price">180,000</span>
+                  <span>VND</span>
+                </div>
+              </div>
+              <i class="add"></i>
+            </div>
+          </div>
+          <div class="recommendation">
+            <div class="img-wrapper">
+              <img src="../asset/icons/lime-minimal.webp" alt="ChoColit" />
+            </div>
+            <div class="content-wrapper">
+              <div class="content">
+                <p class="notes-content regular">Eerl Grey, Chanh</p>
+                <p class="name-content">Ethiopia G1</p>
+                <div class="wrapper">
+                  <span class="price">230,000</span>
+                  <span>VND</span>
+                </div>
+              </div>
+              <i class="add"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-aside">
+        <div class="price">
+          <p class="subtotal condensed-bold text-uppercase">tổng phụ</p>
+          <div class="value">
+            <span>200,000</span>
+            <span>VND</span>
+          </div>
+        </div>
+        <a href="#" class="wrapper bold text-capitalize"> thanh toán </a>
+      </div>
+    </div>
+    <div class="overcast"></div>
+    <div class="pop-up-shop col-4">
+      <div class="content text-center">
+        <p class="notes-content regular">Eerl Grey, Chanh</p>
+        <p class="name-content bold">Ethiopia G1</p>
+        <div class="wrapper condensed-bold">
+          <span data-price = "230.000" class="price">230.000</span>
+          <span>VND</span>
+        </div>
+      </div>
+      <div class="selection">
+        <div class="wrapper">
+          <label class="bold text-uppercase" for="grind-pop-up-shop">Khối lượng</label>
+          <select id='grind-pop-up-shop' class="form-select" aria-label="Default select example">
+            <option selected>Nguyên hạt</option>
+            <option value="1">Espresso</option>
+            <option value="2">Pour Over</option>
+            <option value="3">Phin</option>
+          </select>
+        </div>
+  
+        <div class="qty-weight d-flex">
+          <div class="wrapper">
+            <label class="bold text-uppercase" for="selection-weight">Cỡ xay</label>
+            <select id="weight-pop-up-shop" class="form-select" aria-label="Default select example">
+              <option value = "100">100gr</option>
+              <option selected value="250" >250gr</option>
+              <option value="500">500gr</option>
+              <option value="1000">1kg</option>
+            </select>
+          </div>
+          <form action="">
+            <label class="bold text-uppercase" for="checkout-qty">Số lượng</label>
+            <p class="qty d-flex bold">
+              <button class="qtyminus bold">&minus;</button>
+              <input
+                type="number"
+                name="qty"
+                id="checkout-qty"
+                min="1"
+                max="10"
+                step="1"
+                value="1"
+              />
+              <button class="qtyplus bold">&plus;</button>
+            </p>
+          </form>
+        </div>
+      </div>
+      <button class="add-to-cart bold text-center">Thêm vào giỏ hàng</button>
+      <button class='delete'></button>
     </div>
   </main>
 </body>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../asset/style.css" />
+    <script defer src="../asset/script/checkout.js"></script>
+    <script defer src="../asset/script/side-cart.js"></script>
+    <title>Thanh Toán</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-bar">
+        <li class="content__item">
+          <a href="trangchu.html" class="link link--metis text-capitalize bold"
+            >Trang chủ</a
+          >
+        </li>
+        <li class="content__item">
+          <a href="sanpham.html" class="link link--metis text-capitalize bold"
+            >Sản phẩm</a
+          >
+        </li>
+        <li class="content__item">
+          <a href="#" class="link link--metis text-capitalize bold">Pha chế</a>
+        </li>
+        <li class="content__item">
+          <a href="#" class="link link--metis text-capitalize bold">Liên Hệ</a>
+        </li>
+      </div>
+      <div class="logo">
+        <p class="upper-text">JUBILIE</p>
+        <p class="lower-text">coffee roaster</p>
+      </div>
+      <aside>
+        <div class="cart-icon">
+          <i class="icon"></i>
+          <i class="dropdown-button"></i>
+        </div>
+      </aside>
+    </header>
+    <div class="container pd-x-100">
+      <div class="row">
+        <div class="shopping-cart">
+          <p class="title-checkout text-uppercase bold">giỏ hàng</p>
+          <section class="checkout-table">
+            <div class="checkout-header d-flex">
+              <div class="col-6 header-checkout-products text-uppercase bold">
+                <p>sản phẩm</p>
+              </div>
+              <div class="col-6 header-checkout-options d-flex text-center">
+                <div class="col-4 price text-uppercase bold">giá</div>
+                <div class="col-4 qty text-uppercase bold">sl</div>
+                <div class="col-4 subtotal text-uppercase bold">tổng phụ</div>
+              </div>
+            </div>
+            <div class="checkout-main-table-content">
+              <div data-name-checkout="Berry Good" class="product-name">
+                <div class="col-6 product-info text-uppercase bold">
+                    <div class="img-wrapper">
+                        <img src="../asset/icons/grape-minimal.webp" alt="Berry Good">
+                    </div>
+                    <div class="info">
+                        <p class="name bold text-uppercase">
+                            berry good
+                        </p>
+                        <div class="grind-size d-flex">
+                            <div class="grind">
+                                <span class="text-uppercase">cỡ xay:</span>
+                                <span data-grind = "Nguyên hạt" class="text-uppercase"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 product-options d-flex text-center">
+                  <div class="col-4 price text-uppercase bold">giá</div>
+                  <div class="col-4 qty text-uppercase bold">sl</div>
+                  <div class="col-4 subtotal text-uppercase bold">tổng phụ</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

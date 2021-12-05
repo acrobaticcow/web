@@ -91,7 +91,6 @@ function adjustPrice() {
       }
     }
   });
-  console.log(individualWeight);
   switch (individualWeight) {
     case 100:
       newPrice = price -  (price * 50  / 100);
@@ -107,7 +106,7 @@ function adjustPrice() {
       break;
   }
   document.querySelector(".name-price .price").textContent = '';
-  document.querySelector(".name-price .price").textContent = priceWithQty(newPrice).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+  document.querySelector(".name-price .price").textContent = priceWithQty(newPrice).toFixed(3).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 };
 
 function priceWithQty (id) {

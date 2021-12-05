@@ -4,43 +4,11 @@ const btnRemoveFilter = document.querySelector(".btn-remove-filter");
 const inputsAll = document.querySelectorAll(".input-all");
 const inputItemsAll = document.querySelectorAll(".input-item");
 
-console.log(btnRemoveFilter)
-
 let filter = {
   roast: [],
   acidity: [],
   origin: [],
   process: [],
-};
-
-let myProduct = {
-  asefaDukamo: new Product(
-    "Asefa Dukamo",
-    "Châu Phi",
-    "Cao",
-    "Honey",
-    "Nhạt",
-    "300,000",
-    [" Dưa Gang", " Hoa Đào", "Quả Hạch"]
-  ),
-  aynalemKupo: new Product(
-    "Aynalem Kupo",
-    "Châu Phi",
-    "Cao",
-    "Ướt",
-    "Vừa",
-    "250,000",
-    [" Xuân Đào", " Bergarmot", " Black Tea"]
-  ),
-  aynalemKospo: new Product(
-    "Aynalem Kupo",
-    "Châu Mĩ",
-    "Thấp",
-    "Tự nhiên",
-    "Đậm",
-    "250,000",
-    [" Xuân Đào", " Bergarmot", " Black Tea"]
-  ),
 };
 
 function renderFilter(filterObj) {
@@ -163,6 +131,35 @@ let mangoTango = new Product(
   [" Xoài", " Chanh", " Mật Ong"]
 );
 
+let myProduct = {
+  asefaDukamo: new Product(
+    "Asefa Dukamo",
+    "Châu Phi",
+    "Cao",
+    "Honey",
+    "Nhạt",
+    "300,000",
+    [" Dưa Gang", " Hoa Đào", "Quả Hạch"]
+  ),
+  aynalemKupo: new Product(
+    "Aynalem Nono",
+    "Châu Phi",
+    "Cao",
+    "Ướt",
+    "Vừa",
+    "250,000",
+    [" Xuân Đào", " Bergarmot", " Black Tea"]
+  ),
+  aynalemKospo: new Product(
+    "Aynalem Kupo",
+    "Châu Mĩ",
+    "Thấp",
+    "Tự nhiên",
+    "Đậm",
+    "250,000",
+    [" Xuân Đào", " Bergarmot", " Black Tea"]
+  ),
+};
 
 // myProduct = {
 //   asefaDukamo,aynalemKupo, blah, blaeh, ah
@@ -193,44 +190,21 @@ function renderTarget() {
     } // clear filterd div
     store.forEach((product) => (product.style.display = "block"));
   }
-
+  filteredProducts.innerHTML = "";
   let requireTarget = [];
   resultEl.childNodes.forEach((el) => requireTarget.push(el.innerText));
   let result;
   for (let product in myProduct) {
     let value = Object.values(myProduct[product]);
     // value[1] là category
-    let result;
-    requireTarget.every((target) => {
-      return (result = Object.values(value[1]).some(
+    let result = requireTarget.some((target) => {
+      return Object.values(value[1]).some(
         (k) => k.toUpperCase() === target.toUpperCase()
-      ));
+      );
     });
     if (result == true) {
-      console.log(
-        filteredProductsName.some((el) => {
-          console.log(el);
-          el.toUpperCase() == `${value[0].toUpperCase()}`;
-        })
-      );
-      // if (filteredProductsName.every((el) => el.toUpperCase() == `${value[0].toUpperCase()}`)) return;
       renderProductCard(myProduct[product]);
-      // document.querySelectorAll(".filtered-product .col .name").forEach((el) => filteredProductsName.push(el.dataset.name))
-      // if (
-      //   filteredProductsName.some(
-      //     (k) => k.toUpperCase() == value[0].toUpperCase()
-      //   )
-      // ) {
-      //   console.log("true");
-      // } else {
-      //   console.log("false");
-      // }
     }
-    // else {
-    //   while (filteredProducts.lastElementChild) {
-    //     filteredProducts.removeChild(filteredProducts.lastElementChild);
-    //   }
-    // }
   }
   document.querySelectorAll(".filtered-product .col .name").forEach((el) => {
     // if (!filteredProductsName.some((k) => k == el.dataset.name))
@@ -328,7 +302,7 @@ function renderProductCard(id) {
   `
   );
 }
- function Product(name, origin, acidity, process, roast, price, notes) {
+function Product(name, origin, acidity, process, roast, price, notes) {
   this.name = name;
   this.category = {
     origin: origin,
@@ -339,5 +313,3 @@ function renderProductCard(id) {
   this.price = price;
   this.notes = notes;
 }
-renderProductCard(myProduct.aynalemKupo);
-
