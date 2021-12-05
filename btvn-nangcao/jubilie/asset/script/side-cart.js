@@ -14,7 +14,7 @@ closeBtn.addEventListener("click", () => {
   sideCart.style.paddingRight = "0";
   overCast.style.height = "0";
 });
-let overAllPrice = 0; 
+let overAllPrice = 0;
 adjustPrice();
 function adjustPrice() {
   const price = Number(
@@ -90,3 +90,88 @@ function calculateProgressWidth() {
   return value;
 }
 
+(function checkoutQty() {
+  let overAllPrice = 0;
+  let selectedProductName;
+  const checkoutMain = document.querySelectorAll(
+    ".checkout-main-table-content > *"
+  );
+  checkoutMain.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      selectedProductName = e.currentTarget.dataset.nameCheckout;
+
+      var input = document.querySelector(
+        `[data-name-checkout = "${selectedProductName}"] .product-options #checkout-qty`
+      );
+      var btnminus = document.querySelector(
+        `[data-name-checkout = "${selectedProductName}"] .product-options .checkout-qtyminus`
+      );
+      var btnplus = document.querySelector(
+        `[data-name-checkout = "${selectedProductName}"] .product-options .checkout-qtyplus`
+      );
+    console.log(input)
+      if (
+        input !== undefined &&
+        btnminus !== undefined &&
+        btnplus !== undefined &&
+        input !== null &&
+        btnminus !== null &&
+        btnplus !== null
+      ) {
+        var min = Number(input.getAttribute("min"));
+        var max = Number(input.getAttribute("max"));
+        var step = Number(input.getAttribute("step"));
+    
+        function qtyminus(e) {
+          var current = Number(input.value);
+          var newval = current - step;
+          if (newval < min) {
+            newval = min;
+          } else if (newval > max) {
+            newval = max;
+          }
+          input.value = Number(newval);
+          e.preventDefault();
+        }
+    
+        function qtyplus(e) {
+          var current = Number(input.value);
+          var newval = current + step;
+          if (newval > max) newval = max;
+          input.value = Number(newval);
+          e.preventDefault();
+        }
+    
+        btnminus.addEventListener("click", qtyminus);
+        btnplus.addEventListener("click", qtyplus);
+        btnminus.addEventListener("click", adjustPrice);
+        btnplus.addEventListener("click", adjustPrice);
+      }
+
+      return selectedProductName;
+    });
+  });
+  function adjustPrice() {
+    const price = Number(
+      document.querySelector(
+        `[data-name-checkout = "${selectedProductName}"] .product-options .price`
+      ).dataset.price
+    );
+    document.querySelector(
+      `[data-name-checkout = "${selectedProductName}"] .product-options .price`
+    ).textContent = "";
+    document.querySelector(
+      `[data-name-checkout = "${selectedProductName}"] .product-options .price`
+    ).textContent = priceWithQty(price)
+      .toFixed(3)
+      .replace(/\d(?=(\d{3})+\.)/g, "$&,");
+  }
+  function priceWithQty(id) {
+    let inputQty = document.querySelector(
+      `[data-name-checkout = "${selectedProductName}"] .product-options #checkout-qty`
+    ).value;
+    return id * inputQty;
+  }
+
+ 
+})();

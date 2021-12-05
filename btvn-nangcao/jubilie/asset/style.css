@@ -666,10 +666,9 @@ aside {
   top: 0;
   right: 0;
   transition: all 0.5s;
-  padding-left: 0;
-  padding-right: 0;
   padding-top: 24px;
   background-color: var(--cultured);
+  white-space: nowrap;
 }
 .aside-wrapper:hover {
   overflow: auto;
@@ -1938,7 +1937,7 @@ button {
   margin-top: 76px;
   margin-bottom: 20px;
 }
-.checkout-table {
+.checkout-table .checkout-header {
   padding: 16px 0;
   border-top: 1px solid rgba(0, 0, 0, 1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
@@ -1948,9 +1947,10 @@ button {
 .checkout-table .col-6 > * {
   color: rgba(0, 0, 0, 0.5);
 }
-.checkout-table .header-checkout-options {
-padding-right: 80px;
-/* position: relative; */
+.checkout-table .header-checkout-options,
+.checkout-main-table-content .product-options {
+  padding-right: 80px;
+  /* position: relative; */
 }
 /* .checkout-table .header-checkout-options::after {
   display: block;
@@ -1966,4 +1966,50 @@ padding-right: 80px;
 .checkout-table .header-checkout-products {
   padding-left: 38px;
 }
-
+.checkout-main-table-content .product-info {
+  display: flex;
+  column-gap: 20px;
+  padding-left: 20px;
+}
+.checkout-main-table-content .info {
+  margin-top: 12px;
+  font-size: 20px;
+  line-height: 24px;
+}
+.checkout-main-table-content .info .name {
+  margin-bottom: 8px;
+}
+.checkout-main-table-content .info .grind-size {
+  column-gap: 20px;
+}
+.checkout-main-table-content .info .grind-size > * > * {
+  font-size: 20px;
+  line-height: 24px;
+}
+.checkout-main-table-content .info .grind-size span:first-child {
+  color: rgba(0, 0, 0, 0.5);
+}
+.checkout-main-table-content .info .grind-size span:last-child {
+  font-family: "regular";
+  color: rgba(0, 0, 0, 0.4);
+}
+.checkout-main-table-content .img-wrapper img {
+  --length120: 120px;
+  width: var(--length120);
+  height: var(--length120);
+  object-fit: cover;
+}
+.checkout-main-table-content .checkout-product {
+  padding-top: 20px;
+  padding-left: 12px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.checkout-main-table-content .product-options .qty input {
+  border: none;
+  text-align: center;
+}
+.checkout-main-table-content .product-options .qty:hover {
+  box-shadow: none;
+  transition: none;
+}
