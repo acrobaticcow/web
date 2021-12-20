@@ -1,0 +1,26 @@
+{
+  "beans": [
+    {
+      "id": 0,
+      "name": "Assefa Dukamo",
+      "description": ["hương hoa", "xuân đào", "chanh vàng", "sơ ri" ],
+      "category": {
+        "origin": "Châu Phi",
+        "roast": "Nhạt",
+        "acidity": "High",
+        "process": "Ướt"
+      }
+    },
+    {
+        "id": 1,
+        "name": "Asseba Dokuma",
+        "description": ["hương hoa", "xuân đào", "chanh vàng", "sơ ri" ],
+        "category": {
+          "origin": "Châu Phi",
+          "roast": "Nhạt",
+          "acidity": "High",
+          "process": "Ướt"
+        }
+      }
+  ]
+}
