@@ -1,0 +1,16 @@
+{
+  "cart": [
+    {
+      "id": 0,
+      "name": "Ethiopia G1",
+      "qty": "1",
+      "price": 230000
+    },
+    {
+        "id": 1,
+        "name": "Kenya M2",
+        "qty": "2",
+        "price": 480000
+      }
+  ]
+}

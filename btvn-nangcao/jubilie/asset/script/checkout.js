@@ -3,8 +3,8 @@ const checkOutClsBtn = document.querySelector(".pop-up-shop button.delete");
 const addToCartBtn = document.querySelectorAll(".wrap-price-btn input");
 const optionWeight = document.querySelector("#weight-pop-up-shop");
 const price = Number(
-    document.querySelector(".pop-up-shop .price").dataset.price
-  );
+  document.querySelector(".pop-up-shop .price").dataset.price
+);
 const checkOutBtn = document.querySelector(".pop-up-shop button.add-to-cart");
 // display checkout
 addToCartBtn.forEach((btn) => {
@@ -17,12 +17,13 @@ checkOutClsBtn.addEventListener("click", () => {
   checkOutWindow.style.display = "none";
   overCast.style.height = "0%";
 });
-function priceWithQty(id) {
-  let inputQty = document.querySelector(".pop-up-shop p.qty input").value;
+function priceCheckoutWithQty(id) {
+  let inputQty;
+  inputQty = document.querySelector(".pop-up-shop p.qty input").value
   return id * inputQty;
 }
-adjustPrice();
-function adjustPrice() {
+adjustQtyPrice();
+function adjustQtyPrice() {
   let newPrice;
   newPrice = 0;
   switch (Number(optionWeight.value)) {
@@ -40,55 +41,61 @@ function adjustPrice() {
       break;
   }
   document.querySelector(".pop-up-shop .price").textContent = "";
-  document.querySelector(".pop-up-shop .price").textContent = priceWithQty(
+  document.querySelector(".pop-up-shop .price").textContent = priceCheckoutWithQty(
     newPrice
   )
     .toFixed(3)
     .replace(/\d(?=(\d{3})+\.)/g, "$&,");
-    console.log(newPrice)
 }
 let checkOutInput = document.querySelector("#checkout-qty");
 let checkOutbtnminus = document.querySelector(".pop-up-shop .qtyminus");
 let checkOutbtnplus = document.querySelector(".pop-up-shop .qtyplus");
+function adjustQtyPriceBaseOnQty() {
+  let newPrice;
+  newPrice = parseFloat(document.querySelector(".pop-up-shop .price").textContent);
+  document.querySelector(".pop-up-shop .price").textContent = "";
+  document.querySelector(".pop-up-shop .price").textContent = priceCheckoutWithQty(
+    newPrice
+  )
+    .toFixed(3)
+    .replace(/\d(?=(\d{3})+\.)/g, "$&,");
+}
 if (
-    checkOutInput !== undefined &&
-    checkOutbtnminus !== undefined &&
-    checkOutbtnplus !== undefined &&
-    checkOutInput !== null &&
-    checkOutbtnminus !== null &&
-    checkOutbtnplus !== null
-  ) {
-    var min = Number(checkOutInput.getAttribute("min"));
-    var max = Number(checkOutInput.getAttribute("max"));
-    var step = Number(checkOutInput.getAttribute("step"));
-  
-    function qtyminus(e) {
-      var current = Number(checkOutInput.value);
-      var newval = current - step;
-      if (newval < min) {
-        newval = min;
-      } else if (newval > max) {
-        newval = max;
-      }
-      checkOutInput.value = Number(newval);
-      e.preventDefault();
+  checkOutInput !== undefined &&
+  checkOutbtnminus !== undefined &&
+  checkOutbtnplus !== undefined &&
+  checkOutInput !== null &&
+  checkOutbtnminus !== null &&
+  checkOutbtnplus !== null
+) {
+  var min = Number(checkOutInput.getAttribute("min"));
+  var max = Number(checkOutInput.getAttribute("max"));
+  var step = Number(checkOutInput.getAttribute("step"));
+
+  function qtyminus(e) {
+    var current = Number(checkOutInput.value);
+    var newval = current - step;
+    if (newval < min) {
+      newval = min;
+    } else if (newval > max) {
+      newval = max;
     }
-  
-    function qtyplus(e) {
-      var current = Number(checkOutInput.value);
-      var newval = current + step;
-      if (newval > max) newval = max;
-      checkOutInput.value = Number(newval);
-      e.preventDefault();
-    }
-  
-    checkOutbtnminus.addEventListener("click", qtyminus);
-    checkOutbtnplus.addEventListener("click", qtyplus);
+    checkOutInput.value = Number(newval);
+    adjustQtyPrice()
+    e.preventDefault();
   }
 
+  function qtyplus(e) {
+    var current = Number(checkOutInput.value);
+    var newval = current + step;
+    if (newval > max) newval = max;
+    checkOutInput.value = Number(newval);
+    adjustQtyPrice()
+    e.preventDefault();
+  }
 
-  
-  checkOutbtnminus.addEventListener("click", adjustPrice);
-  checkOutbtnplus.addEventListener("click", adjustPrice);
+  checkOutbtnminus.addEventListener("click", qtyminus);
+  checkOutbtnplus.addEventListener("click", qtyplus);
+}
 
-  optionWeight.addEventListener("change", adjustPrice)
+optionWeight.addEventListener("change", adjustQtyPrice);

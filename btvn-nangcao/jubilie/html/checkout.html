@@ -96,7 +96,12 @@
                     text-center
                   "
                 >
-                  <div data-price = "200.000" class="col-4 price text-uppercase regular">200.000</div>
+                  <div
+                    data-price="200.000"
+                    class="col-4 price text-uppercase regular"
+                  >
+                    200.000
+                  </div>
                   <div class="col-4 qty text-uppercase regular">
                     <form action="">
                       <div class="qty d-flex justify-content-center bold">
@@ -104,7 +109,6 @@
                         <input
                           type="number"
                           name="qty"
-                          id="checkout-qty"
                           min="1"
                           max="10"
                           step="1"
@@ -118,66 +122,134 @@
                   <div class="col-4 subtotal text-uppercase regular">
                     200.000
                   </div>
+                  <button class="delete-user-product"></button>
                 </div>
               </div>
               <div
-              data-name-checkout="Mango Tango"
-              class="checkout-product d-flex"
-            >
-              <div class="col-6 product-info bold">
-                <div class="img-wrapper">
-                  <img
-                    src="../asset/icons/mango-minimal.webp"
-                    alt="Berry Good"
-                  />
-                </div>
-                <div class="info">
-                  <p class="name text-uppercase">Mango Tango</p>
-                  <div class="grind-size d-flex">
-                    <div class="size">
-                      <span>Lượng:</span>
-                      <span>250gr</span>
-                    </div>
-                    <div class="grind">
-                      <span>Cỡ:</span>
-                      <span>Nguyên hạt</span>
+                data-name-checkout="Mango Tango"
+                class="checkout-product d-flex"
+              >
+                <div class="col-6 product-info bold">
+                  <div class="img-wrapper">
+                    <img
+                      src="../asset/icons/mango-minimal.webp"
+                      alt="Berry Good"
+                    />
+                  </div>
+                  <div class="info">
+                    <p class="name text-uppercase">Mango Tango</p>
+                    <div class="grind-size d-flex">
+                      <div class="size">
+                        <span>Lượng:</span>
+                        <span>250gr</span>
+                      </div>
+                      <div class="grind">
+                        <span>Cỡ:</span>
+                        <span>Nguyên hạt</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                class="
-                  col-6
-                  product-options
-                  d-flex
-                  align-items-center
-                  text-center
-                "
-              >
-                <div data-price = "200.000" class="col-4 price text-uppercase regular">200.000</div>
-                <div class="col-4 qty text-uppercase regular">
-                  <form action="">
-                    <div class="qty d-flex justify-content-center bold">
-                      <button class="checkout-qtyminus bold">&minus;</button>
-                      <input
-                        type="number"
-                        name="qty"
-                        id="checkout-qty"
-                        min="1"
-                        max="10"
-                        step="1"
-                        value="1"
-                        size="2"
-                      />
-                      <button class="checkout-qtyplus bold">&plus;</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="col-4 subtotal text-uppercase regular">
-                  200.000
+                <div
+                  class="
+                    col-6
+                    product-options
+                    d-flex
+                    align-items-center
+                    text-center
+                  "
+                >
+                  <div
+                    data-price="200.000"
+                    class="col-4 price text-uppercase regular"
+                  >
+                    200.000
+                  </div>
+                  <div class="col-4 qty text-uppercase regular">
+                    <form action="">
+                      <div class="qty d-flex justify-content-center bold">
+                        <button class="checkout-qtyminus bold">&minus;</button>
+                        <input
+                          type="number"
+                          name="qty"
+                          min="1"
+                          max="10"
+                          step="1"
+                          value="1"
+                          size="2"
+                        />
+                        <button class="checkout-qtyplus bold">&plus;</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-4 subtotal text-uppercase regular">
+                    200.000
+                  </div>
+                  <button class="delete-user-product"></button>
                 </div>
               </div>
             </div>
+          </section>
+          <section class="additional-btn d-flex justify-content-between">
+            <a
+              class="continue regular text-uppercase"
+              href="../html/sanpham.html"
+              >tiếp tục mua sắm</a
+            >
+            <button class="dlt-all regular text-uppercase">xóa tất cả</button>
+          </section>
+          <section class="checkout-section d-flex justify-content-between">
+            <div class="discount-code">
+              <label class="title bold text-uppercase">mã giảm giá</label>
+              <br />
+              <label class="sub-title regular">
+                Khi bạn có mã giảm giá, hãy nhập vào đây
+              </label>
+              <br />
+              <input
+                type="text"
+                id="input-discount"
+                class="regular text-uppercase"
+              />
+              <br />
+              <button class="apply-coupon regular text-uppercase">
+                áp dụng mã
+              </button>
+            </div>
+            <div class="proceed-to-checkout d-flex">
+              <!-- <div class="wrapper-price d-flex">
+                <p class="bold sub-total">
+                  Tổng phụ :
+                </p>
+                <span class="price regular">000.000</span>
+                <span class="regular text-uppercase">vnd</span>
+              </div>
+              <div class="wrapper-coupon d-flex">
+                <p class="bold coupon">
+                  Coupon :
+                </p>
+                <span class="price regular">000.000</span>
+                <span class="regular text-uppercase">vnd</span>
+              </div> -->
+              <div class="txt-column">
+                <p class="sub-total bold">Tổng phụ :</p>
+                <p class="coupon bold">Coupon :</p>
+                <p class="grand-total bold text-uppercase">Tổng chính :</p>
+              </div>
+              <div class="price-column">
+                <p class="sub-total regular text-uppercase">
+                  <span>980.000</span>
+                  <span>vnd</span>
+                </p>
+                <p class="coupon regular text-uppercase">
+                  <span>-</span>
+                  <span>0</span>
+                  <span>vnd</span>
+                </p>
+                <p class="grand-total bold text-uppercase">
+                  <span>980.000</span> <span>vnd</span>
+                </p>
+              </div>
             </div>
           </section>
         </div>
@@ -189,7 +261,9 @@
         </div>
         <div class="slider">
           <div class="slider-text">
-            <div class="wrapper d-flex justify-content-evenly align-items-center">
+            <div
+              class="wrapper d-flex justify-content-evenly align-items-center"
+            >
               <i></i>
               <div class="value">
                 <span class="price medium">100.000</span>
@@ -236,7 +310,9 @@
           <div class="product-value">
             <div class="price">
               <p class="price-title bold text-uppercase">Giá</p>
-              <span class="price-value condensed-bold" data-price = "200.000">200.000</span>
+              <span class="price-value condensed-bold" data-price="200.000"
+                >200.000</span
+              >
               <span class="price-currency condensed-bold">VND</span>
             </div>
             <form action="">
