@@ -3,6 +3,7 @@ const app = document.getElementById("app");
 class FriendList extends React.Component {
   constructor(props) {
     super(props);
+    this.sortUser = this.sortUser.bind(this);
   }
   state = {
     friendList: [
@@ -91,11 +92,58 @@ class FriendList extends React.Component {
         avatar: "https://reqres.in/img/faces/12-image.jpg",
       },
     ],
+    currentSortOpt: "Default",
   };
+  sortUser() {
+    let select = document.querySelector("#user-category");
+    let sortedFrList;
+    if (select.value === "id") {
+      sortedFrList = this.state.friendList.sort((a, b) => a.id - b.id);
+    } else if (select.value === "email") {
+      sortedFrList = this.state.friendList.sort((a, b) => {
+        let nameA = a.email.toUpperCase();
+        let nameB = b.email.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      });
+    } else if (select.value === "first_name") {
+      sortedFrList = this.state.friendList.sort((a, b) => {
+        let nameA = a.first_name.toUpperCase();
+        let nameB = b.first_name.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      });
+    } else {
+      sortedFrList = this.state.friendList.sort((a, b) => {
+        let nameA = a.last_name.toUpperCase();
+        let nameB = b.last_name.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      });
+    }
+    this.setState({ friendList: sortedFrList });
+    this.setState({currentSortOpt: select.value});
+  }
   render() {
     return (
       <>
         <Clock />
+        <Option handleChange={this.sortUser} option ={this.state.currentSortOpt} />
         <h1 style={{ textAlign: "center" }}>Hello ReqRes users!</h1>
         <div className="friendList">
           {this.state.friendList.map((friend) => {
@@ -115,6 +163,8 @@ class FriendList extends React.Component {
   }
 }
 
+console.log("are u okay");
+
 const Friend = (props) => {
   return (
     <div className="friend">
@@ -127,17 +177,15 @@ const Friend = (props) => {
   );
 };
 
-
-
 class Clock extends React.Component {
   constructor(props) {
     super(props);
     setInterval(() => {
-        this.setState({time: new Date().toUTCString()})
-    },1000)
+      this.setState({ time: new Date().toUTCString() });
+    }, 1000);
   }
   state = {
-    time: new Date().toUTCString()
+    time: new Date().toUTCString(),
   };
   render() {
     return <h3 className="clock">{this.state.time}</h3>;
@@ -150,7 +198,5 @@ Friend.propTypes = {
   email: PropTypes.string,
 };
 Clock.propTypes = {
-    time: PropTypes.string
-}
-
-ReactDOM.render(<FriendList />, app);
+  time: PropTypes.string,
+};
