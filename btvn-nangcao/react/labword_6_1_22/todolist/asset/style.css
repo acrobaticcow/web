@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.onGoings-wrapper {
+  min-height: 10rem;
+}
+.onGoings-wrapper button {
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.tittle {
+  color: green;
+}

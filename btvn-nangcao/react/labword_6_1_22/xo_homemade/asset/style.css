@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    --width: 100px;
+    list-style: none;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board {
+    width: 300px;
+}
+.square {
+    width: var(--width);
+    height: var(--width);
+}
+.info-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.history h3 {
+    margin-top: 0;
+}
